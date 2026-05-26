@@ -71,25 +71,42 @@ src/
    └─ リポジトリ同梱の signature 素材を返却
 ```
 
-この構成により、外部 API 障害時も最低限の素材供給を継続する。
+この構成により、外部 API 障害時も最低限の素材供給を継続することを目標とする（API → cache → bundled の完全実装は Phase α 以降で順次対応予定）。
 
 ## 6. darake-dev-app-AI との接続シナリオ（コード例）
 
-```ts
-// 1. プロジェクト初期化
-await polish.init_project({ category: 'finance', style: 'notion' });
+### 6.1 現行 API での呼び出し例（実動作）
 
-// 2. レシピ取得（推奨スタイル・配置・素材組み合わせ）
+現行 `src/mcp/schemas` に基づく実例：
+
+```ts
+// 1. プロジェクト初期化（references / category / platform が必須）
+await polish.init_project({
+  references: ['Linear', 'Notion'],
+  category: 'finance',
+  platform: 'ios',
+});
+
+// 2. アイコン取得
+await polish.get_icon({ project_id, semantic: 'wallet' });
+
+// 3. フォント取得
+await polish.get_font({ project_id, semantic: 'Inter', category: 'sans-serif' });
+```
+
+### 6.2 将来目標 API（マスタープラン v3）
+
+> **注**: 以下は target API。`shelf_tier` / `get_recipe` / `get_template` は未実装。Phase β〜γ で対応予定。
+
+```ts
+// レシピ取得（推奨スタイル・配置・素材組み合わせ）— Phase γ 以降
 await polish.get_recipe({ project_id, category: 'finance' });
 
-// 3. テンプレート取得
+// テンプレート取得 — Phase β 以降
 await polish.get_template({ project_id, screen_type: 'dashboard', style: 'notion' });
 
-// 4. アイコン取得（signature 棚から）
+// アイコン取得（signature 棚から）— shelf_tier は Phase α-4 以降
 await polish.get_icon({ project_id, semantic: 'wallet', shelf_tier: 'signature' });
-
-// 5. フォント取得
-await polish.get_font({ project_id, category: 'sans-serif' });
 ```
 
 上記フローで darake-dev-app-AI は設計図に合わせた素材・部品を取得し、実装統括を行う。
