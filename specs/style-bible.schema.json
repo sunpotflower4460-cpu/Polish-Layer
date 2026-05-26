@@ -48,10 +48,10 @@
               "enum": ["auto", "light", "dark"]
             },
             "light": {
-              "$ref": "#/$defs/colorPalette"
+              "$ref": "#/definitions/colorPalette"
             },
             "dark": {
-              "$ref": "#/$defs/colorPalette"
+              "$ref": "#/definitions/colorPalette"
             },
             "semantic": {
               "type": "string",
@@ -211,7 +211,7 @@
       }
     }
   },
-  "$defs": {
+  "definitions": {
     "colorPalette": {
       "type": "object",
       "required": ["primary", "bg", "label", "secondary_label", "separator"],
