@@ -1,5 +1,4 @@
 import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
 
 import { ZodError } from 'zod';
 
@@ -18,6 +17,7 @@ import {
   QcCheckOutputSchema,
   StyleBibleSchema,
 } from '../src/mcp/schemas/index.js';
+import { resolveFromRoot } from '../src/utils/paths.js';
 
 describe('methods', () => {
   test('all stub methods return schema-valid dummy responses', async () => {
@@ -57,7 +57,7 @@ describe('methods', () => {
   });
 
   test('init-project output aligns with specs/style-bible.schema.json contract keys', async () => {
-    const specPath = resolve(process.cwd(), 'specs/style-bible.schema.json');
+    const specPath = resolveFromRoot('specs/style-bible.schema.json');
     const spec = JSON.parse(readFileSync(specPath, 'utf-8')) as {
       required: string[];
       properties: Record<string, unknown>;
