@@ -1,104 +1,112 @@
 # 02. アーキテクチャ
 
-## 全体構成図
+## 1. 概要: 工房バックエンドとしての Polish Layer
+
+Polish Layer は darake-dev-app-AI が実装時に呼び出す「素材工房バックエンド」であり、素材・部品・ノウハウを MCP API 経由で供給する。ユーザー向け UI やコード生成実行は darake-dev-app-AI 側の責務とし、本リポジトリは供給品質・取得確実性・ライセンス整合性を担保する。
+
+## 2. レイヤー構造: MCP Server → Connector 層 → Asset 層
 
 ```
-┌──────────────────────────────────────────────────────┐
-│   AI Agent  (Claude Code / Cursor / Devin / 他)       │
-└──────────────────────┬───────────────────────────────┘
-                       │ MCP / REST
-┌──────────────────────▼───────────────────────────────┐
-│              Polish Layer Gateway                     │
-│  ・意図解釈 (自然言語 → 構造化クエリ)                  │
-│  ・Style Bible 注入                                   │
-│  ・選定ロジック (VLM照合・ランキング)                  │
-│  ・レスポンス正規化                                    │
-└──┬─────┬─────┬─────┬─────┬─────┬─────────────────────┘
-   │     │     │     │     │     │
-   ▼     ▼     ▼     ▼     ▼     ▼
-┌─────┐┌────┐┌────┐┌────┐┌────┐┌──────┐
-│ UI  ││Icon││Font││Anim││ SE ││Copy  │
-│ Kit ││    ││    ││    ││/BGM││/i18n │
-└──┬──┘└─┬──┘└─┬──┘└─┬──┘└─┬──┘└──┬───┘
-   │     │     │     │     │      │
-   ▼     ▼     ▼     ▼     ▼      ▼
-   各種外部API
+┌─────────────────────────────────────────────┐
+│ darake-dev-app-AI / 各種 AI クライアント      │
+└──────────────────────┬──────────────────────┘
+                       │ MCP
+┌──────────────────────▼──────────────────────┐
+│ MCP Server Layer (`src/mcp/`)               │
+│ - ツール公開 (`polish.*`)                   │
+│ - 入出力スキーマ検証                         │
+│ - エラー正規化                               │
+└──────────────────────┬──────────────────────┘
                        │
-┌──────────────────────▼───────────────────────────────┐
-│         Pipeline Adapters (変換・正規化)              │
-│   フォーマット変換 / 圧縮 / リサイズ / ラウドネス調整  │
-└──────────────────────┬───────────────────────────────┘
-                       ▼
-┌──────────────────────────────────────────────────────┐
-│            QC Gate (自動品質検査)                     │
-│   HIG準拠 / WCAG / タップ領域 / LUFS / 過剰演出検知   │
-└──────────────────────┬───────────────────────────────┘
-                       ▼
-        SwiftUI / React Native コード片
-        + アセットファイル一式 + 配置指示
+┌──────────────────────▼──────────────────────┐
+│ Connector Layer (`src/connectors/`)         │
+│ - 外部 API 接続                              │
+│ - ソース別レスポンス正規化                   │
+│ - ライセンス情報付与                         │
+└──────────────────────┬──────────────────────┘
                        │
-┌──────────────────────▼───────────────────────────────┐
-│       Reference Memory (採用ログ・評価DB)             │
-└──────────────────────────────────────────────────────┘
+┌──────────────────────▼──────────────────────┐
+│ Asset Layer (`assets/`)                      │
+│ - 同梱済み素材データ                          │
+│ - fallback 用メタデータ                       │
+└─────────────────────────────────────────────┘
 ```
 
-## モジュール責務
+## 3. ディレクトリ構造（`src/` 最新）
 
-### Gateway
+```text
+src/
+├── connectors/   外部 API / データソース接続
+├── mcp/          MCP サーバー・メソッド・スキーマ
+├── memory/       キャッシュ・記録用途（将来拡張）
+├── pipeline/     変換・正規化パイプライン（将来拡張）
+├── qc/           素材整合性チェック用途（将来拡張）
+├── utils/        共有ユーティリティ
+└── index.ts      エントリーポイント
+```
 
-エージェントからの入力（自然言語の意図 + プロジェクトID）を受け、Style Bible を取得し、各外部APIへのクエリに翻訳する中枢。VLMで参照画像を解析、過去採用ログから類似度を計算、結果を統一スキーマに正規化する。
+## 4. 3 階層棚構造（signature / curated / all）
 
-### Asset Connectors
+```text
+各棚（icon / font / animation / ...）
+├── signature  最上位品質の厳選セット（最優先）
+├── curated    用途別の定番セット（品質スコア閾値あり）
+└── all        接続先全体から都度取得するフォールバック
+```
 
-外部APIへの接続層。1API = 1ファイルで実装。共通インターフェース（入力スキーマ・出力スキーマ・ライセンス情報の付与・正規化）を実装する。
+- `signature`: AI が迷った場合に最初に返す推奨層
+- `curated`: 品質と網羅性のバランスを取る通常層
+- `all`: ヒット不足時の補完層
 
-### Style Bible 機構
+## 5. 取得確実性 3 層冗長化（API → cache → bundled）
 
-プロジェクト開始時に参照タイトルとカテゴリから Style Bible を生成・固定。以降エージェントは毎回これを読み込む。詳細は `03_style-bible-spec.md`。
+```text
+1) Real-time API
+   └─ 公式 API から最新素材を取得
+        ↓ 失敗時
+2) Local Cache (TTL 24h)
+   └─ 直近成功レスポンスを再利用
+        ↓ 失敗時
+3) Bundled Backup
+   └─ リポジトリ同梱の signature 素材を返却
+```
 
-### Pipeline Adapters
+この構成により、外部 API 障害時も最低限の素材供給を継続することを目標とする（API → cache → bundled の完全実装は Phase α-4 以降で順次対応予定）。
 
-各APIから返ってくるバラバラのフォーマットを統一形に揃える層。アイコンはSVG統一+svgo最適化、フォントはサブセット化、Lottieは軽量化、音声はffmpegで-16 LUFSにノーマライズ、画像はsharpでリサイズ・圧縮。
+## 6. darake-dev-app-AI との接続シナリオ（コード例）
 
-### QC Gate
+### 6.1 現行 API での呼び出し例（実動作）
 
-App Store Review Guidelines と Apple HIG から逆算した自動検査。違反は差し戻し。詳細は `06_qc-rules.md`。
+現行 `src/mcp/schemas` に基づく実例：
 
-### Reference Memory
+```ts
+// 1. プロジェクト初期化（references / category / platform が必須）
+await polish.init_project({
+  references: ['Linear', 'Notion'],
+  category: 'finance',
+  platform: 'ios',
+});
 
-採用された組み合わせと評価（App Storeレビュー、利用継続率等）を蓄積。pgvectorで意図埋め込みを保存し類似検索を高速化。
+// 2. アイコン取得
+await polish.get_icon({ project_id, semantic: 'wallet' });
 
-## 技術スタック
+// 3. フォント取得
+await polish.get_font({ project_id, semantic: 'Inter', category: 'sans-serif' });
+```
 
-> **MVP段階の状態**：MCP stdio transport のみ実装。REST フォールバック（Hono 想定）は Connector 実装後のフェーズで追加予定。
+### 6.2 将来目標 API（マスタープラン v3）
 
-- **言語**：TypeScript（strict）
-- **Webフレームワーク**：Hono または Fastify
-- **MCP SDK**：`@modelcontextprotocol/sdk`
-- **スキーマ検証**：zod
-- **DB**：Postgres + pgvector（Prisma 経由）
-- **キャッシュ**：Redis（必要時）
-- **アセットストレージ**：S3 互換 + CloudFront
-- **VLM**：Claude Sonnet または GPT-4o
-- **画像処理**：sharp
-- **SVG最適化**：svgo
-- **音声処理**：ffmpeg
-- **Lottie検査**：lottie-web（ヘッドレス）
-- **ホスティング**：Cloudflare Workers / Fly.io / Render
-- **テスト**：Vitest
+> **注**: 以下は target API。`shelf_tier` / `get_recipe` / `get_template` は未実装。Phase β〜γ で対応予定。
 
-## パフォーマンス目標
+```ts
+// レシピ取得（推奨スタイル・配置・素材組み合わせ）— Phase γ 以降
+await polish.get_recipe({ project_id, category: 'finance' });
 
-エージェントからの呼び出しは平均 **200ms 以下**を目標。重い処理（VLM解析・大量アセット変換）は非同期ジョブに切り出す。
+// テンプレート取得 — Phase β 以降
+await polish.get_template({ project_id, screen_type: 'dashboard', style: 'notion' });
 
-## セキュリティ
+// アイコン取得（signature 棚から）— shelf_tier は Phase α-4 以降
+await polish.get_icon({ project_id, semantic: 'wallet', shelf_tier: 'signature' });
+```
 
-- 外部APIキーはサーバー側で保持。エージェントには露出しない。
-- レート制限を Gateway レベルで実装。
-- ライセンス違反検知ログを残す。
-
-## 設計判断の記録
-
-- **なぜ自前アセット倉庫を作らないか**：メンテコストとライセンスリスクが過大。既存APIの進化に乗っかるほうが優位。
-- **なぜ MCP 優先か**：Claude Code / Cursor / Devin 等が標準対応しつつあるため、横展開コストが最小。
-- **なぜ MVPがモバイル一般アプリか**：品質差が露骨に出るため、価値が伝わりやすい。
+上記フローで darake-dev-app-AI は設計図に合わせた素材・部品を取得し、実装統括を行う。

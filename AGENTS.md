@@ -14,9 +14,9 @@
 
 ## 2. プロジェクトの目的（要約）
 
-AIエージェントがモバイルアプリを作る際の品質を「毎回大手レベル」に安定させるための、MCP/REST 経由で接続される品質補完サーバーを構築する。
+darake-dev-app-AI が設計図を完成品に仕上げる際に呼び出す、企業クオリティの素材・部品・ノウハウを供給する **素材工房バックエンド** を構築する。
 
-詳細は `docs/01_concept.md` を参照。
+詳細は `docs/00_workshop_master_plan.md`（最重要）および `docs/01_concept.md` を参照。
 
 ---
 
@@ -26,11 +26,32 @@ AIエージェントがモバイルアプリを作る際の品質を「毎回大
 
 1. `README.md`（プロジェクト全体像）
 2. `AGENTS.md`（本ファイル）
-3. `docs/01_concept.md`（コンセプト）
+3. `docs/00_workshop_master_plan.md`（全体方針・最重要）
 4. `docs/02_architecture.md`（設計）
-5. 該当タスクに関連する `docs/03〜08` のファイル
+5. `docs/04_mcp-api-spec.md`（MCP API 仕様）
+6. `docs/05_connectors.md`（コネクタ仕様）
+7. 該当タスクに関連する追加ファイル
 
 読まずに実装を始めることは禁止。
+
+### 必読ファイル（上記手順の補足）
+
+以下は上記「必須手順」を具体化したリストである。順序・内容は手順と一致している。
+
+| ファイル | 目的 |
+|---|---|
+| `docs/00_workshop_master_plan.md` | 全体方針（最重要） |
+| `docs/02_architecture.md` | アーキテクチャ |
+| `docs/04_mcp-api-spec.md` | MCP API 仕様 |
+| `docs/05_connectors.md` | コネクタ仕様 |
+| `AGENTS.md`（本ファイル） | 運用ルール |
+
+以下は後続 PR で追加予定（追加され次第、本リストに加える）:
+- `docs/quality-criteria.md` （素材品質基準）
+- `docs/antipatterns.md` （反パターン集）
+- `docs/styles/*.md` （スタイル基準）
+- `docs/layouts/*.md` （配置パターン基準）
+- `docs/curation-criteria.md` （AI Vision キュレーション基準）
 
 ---
 
@@ -41,12 +62,14 @@ AIエージェントがモバイルアプリを作る際の品質を「毎回大
 各フェーズの作業範囲：
 
 - **Phase 0**：ドキュメント整備のみ。コード実装禁止。
-- **Phase 1**：MCPサーバー雛形（6メソッドの空実装）
-- **Phase 2**：Connector 実装（SF Symbols → Iconify → Google Fonts → LottieFiles → freesound の順）
-- **Phase 3**：Style Bible 機構
-- **Phase 4**：QC Gate
-- **Phase 5**：コード生成
-- **Phase 6**：デプロイと自己ドッグフード
+- **Phase 1**：MCPサーバー雛形（7メソッドの空実装）
+- **Phase 2**：Connector 実装（SF Symbols → Iconify → Google Fonts → useAnimations → freesound の順）
+- **Phase α**: 素材棚完成（コネクタ全種実装 + AI Vision キュレーション + 同梱バックアップ）
+- **Phase β**: 部品棚（画面テンプレート + UI コンポーネント + 配置パターン）
+- **Phase γ**: ノウハウ棚（カテゴリ別レシピ）
+- **Phase δ**: API 拡充（残りメソッド実装）
+- **Phase ε**: 工房窓口アプリ（棚閲覧 + キュレーション削除 UI）
+- **Phase 3〜6（旧計画）** ：廃止。Style Bible 生成・管理、QC Gate、コード生成、デプロイ等の責務は darake-dev-app-AI 側に移管済み。
 
 **現在のフェーズ外の作業を勝手に進めないこと。**
 
@@ -56,11 +79,11 @@ AIエージェントがモバイルアプリを作る際の品質を「毎回大
 
 以下の原則は本プロジェクトの根幹である。逸脱する実装は受け入れられない。
 
-1. **自前でアセットを抱えない。** 既存外部API（Sketchfab / LottieFiles / SF Symbols / freesound 等）をオーケストレーションする。
-2. **Style Bible が真実の源（Single Source of Truth）。** すべての生成物は Style Bible に従う。
-3. **QC Gate を通らない生成物は出力しない。** 違反は必ず差し戻す。
-4. **MCP優先、REST はフォールバック。** インターフェースは MCP メソッドを基準に設計する。
-5. **ライセンス情報を必ず付与。** 各アセットには使用可能ライセンス範囲のメタデータを添える。
+1. **自前でアセットを抱えない。** 既存外部API（SF Symbols / Iconify / Google Fonts / freesound / LottieFiles 等）をオーケストレーションする。
+2. **供給品質・取得確実性・ライセンス整合性を担保する。** Polish Layer の責務はここに集中する。
+3. **MCP優先、REST はフォールバック。** インターフェースは MCP メソッドを基準に設計する。
+4. **ライセンス情報を必ず付与。** 各アセットには使用可能ライセンス範囲のメタデータを添える。
+5. **Style Bible 生成・管理、コード生成、QC 検査は darake-dev-app-AI 側の責務。** Polish Layer はこれらを実装しない。
 
 ---
 
@@ -86,14 +109,12 @@ AIエージェントがモバイルアプリを作る際の品質を「毎回大
 
 ```
 src/
-├── mcp/          MCPサーバー本体
-├── gateway/      意図解釈・ルーティング
+├── mcp/          MCPサーバー本体・メソッド・スキーマ
 ├── connectors/   外部API接続（1API = 1ファイル）
-├── style-bible/  Style Bible 生成・管理
-├── pipeline/     変換・正規化
-├── qc/           QC Gate
-├── memory/       Reference Memory
-└── codegen/      コード生成
+├── pipeline/     変換・正規化パイプライン（将来拡張）
+├── qc/           素材整合性チェック用途（将来拡張）
+├── memory/       キャッシュ・記録用途（将来拡張）
+└── utils/        共有ユーティリティ
 ```
 
 **新規ディレクトリを勝手に追加しないこと。** 必要な場合はユーザーに提案して承認を得る。
@@ -144,9 +165,9 @@ Conventional Commits に従う。
 
 ---
 
-## 11. ドッグフード基準
+## 11. 成功基準
 
-最終的に Polish Layer 自身を使って App Store にアプリを1本リリースし、レビュー★4.5を取れることが成功基準である。すべての実装判断はこの基準に照らして行うこと。
+darake-dev-app-AI が Polish Layer の素材を使って App Store にアプリを1本リリースし、レビュー★4.5を取れることが成功基準である。すべての実装判断はこの基準に照らして行うこと（App Store リリース自体は darake-dev-app-AI 側の責務）。
 
 ---
 
