@@ -1,0 +1,228 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/sunpotflower4460-cpu/Polish-Layer/specs/style-bible.template.schema.json",
+  "title": "StyleBibleTemplate",
+  "description": "Polish Layer プロジェクトのスタイル規定テンプレート（project_id 注入前）",
+  "type": "object",
+  "required": ["references", "platform", "category", "design_system", "motion", "sound", "copy", "qc_thresholds"],
+  "additionalProperties": false,
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "プロジェクト固有ID（UUID v4）。polish.init_project 呼び出し時に自動付与される。テンプレートには含まれない。"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Style Bible バージョン（例: 1.0.0）",
+      "default": "1.0.0"
+    },
+    "platform": {
+      "type": "string",
+      "enum": ["ios", "android", "both"],
+      "description": "対象プラットフォーム"
+    },
+    "references": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "参照タイトル配列（例: [\"Linear\", \"Things 3\"]）"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["productivity", "social", "finance", "health", "utility"],
+      "description": "アプリカテゴリ"
+    },
+    "design_system": {
+      "type": "object",
+      "required": ["color", "typography", "spacing", "corner_radius", "elevation"],
+      "additionalProperties": false,
+      "properties": {
+        "color": {
+          "type": "object",
+          "required": ["mode", "light", "dark"],
+          "additionalProperties": false,
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": ["auto", "light", "dark"]
+            },
+            "light": {
+              "$ref": "#/definitions/colorPalette"
+            },
+            "dark": {
+              "$ref": "#/definitions/colorPalette"
+            },
+            "semantic": {
+              "type": "string",
+              "description": "セマンティックカラーの説明"
+            }
+          }
+        },
+        "typography": {
+          "type": "object",
+          "required": ["family", "scale", "weights"],
+          "additionalProperties": false,
+          "properties": {
+            "family": {
+              "type": "string",
+              "description": "フォントファミリー（例: SF Pro, Inter）"
+            },
+            "scale": {
+              "type": "string",
+              "description": "タイポグラフィスケール（例: iOS Dynamic Type）"
+            },
+            "weights": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 100,
+                "maximum": 900,
+                "multipleOf": 100
+              },
+              "description": "使用するフォントウェイト"
+            }
+          }
+        },
+        "spacing": {
+          "type": "object",
+          "required": ["base", "scale"],
+          "additionalProperties": false,
+          "properties": {
+            "base": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "ベーススペーシング単位（pt）"
+            },
+            "scale": {
+              "type": "array",
+              "items": { "type": "integer", "minimum": 0 },
+              "description": "スペーシングスケール配列（pt）"
+            }
+          }
+        },
+        "corner_radius": {
+          "type": "object",
+          "required": ["card", "button", "sheet"],
+          "additionalProperties": false,
+          "properties": {
+            "card": { "type": "number", "minimum": 0 },
+            "button": { "type": "number", "minimum": 0 },
+            "sheet": { "type": "number", "minimum": 0 }
+          }
+        },
+        "elevation": {
+          "type": "string",
+          "enum": ["subtle", "flat", "strong"]
+        }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "required": ["easing", "duration", "spring"],
+      "additionalProperties": false,
+      "properties": {
+        "easing": {
+          "type": "string",
+          "description": "デフォルトイージング（例: cubic-bezier(0.32, 0.72, 0, 1)）"
+        },
+        "duration": {
+          "type": "object",
+          "required": ["micro", "standard", "emphasized"],
+          "additionalProperties": false,
+          "properties": {
+            "micro": { "type": "integer", "minimum": 0, "description": "ミクロアニメーション時間（ms）" },
+            "standard": { "type": "integer", "minimum": 0, "description": "標準アニメーション時間（ms）" },
+            "emphasized": { "type": "integer", "minimum": 0, "description": "強調アニメーション時間（ms）" }
+          }
+        },
+        "spring": {
+          "type": "object",
+          "required": ["stiffness", "damping"],
+          "additionalProperties": false,
+          "properties": {
+            "stiffness": { "type": "number", "minimum": 0 },
+            "damping": { "type": "number", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "sound": {
+      "type": "object",
+      "required": ["enabled", "ui_se_set", "loudness_target_lufs"],
+      "additionalProperties": false,
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "ui_se_set": {
+          "type": "string",
+          "enum": ["subtle_haptic_complement", "rich", "minimal"]
+        },
+        "loudness_target_lufs": {
+          "type": "number",
+          "description": "ターゲットラウドネス（LUFS）。推奨: -16"
+        }
+      }
+    },
+    "copy": {
+      "type": "object",
+      "required": ["tone", "person", "locale"],
+      "additionalProperties": false,
+      "properties": {
+        "tone": {
+          "type": "string",
+          "enum": ["friendly_professional", "playful", "formal"]
+        },
+        "person": {
+          "type": "string",
+          "enum": ["first", "second", "third"]
+        },
+        "locale": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^[a-z]{2}$" },
+          "minItems": 1,
+          "description": "対応ロケール（例: [\"ja\", \"en\"]）"
+        }
+      }
+    },
+    "qc_thresholds": {
+      "type": "object",
+      "required": ["wcag", "min_tap_target_pt", "max_bundle_mb", "min_fps"],
+      "additionalProperties": false,
+      "properties": {
+        "wcag": {
+          "type": "string",
+          "enum": ["AA", "AAA"]
+        },
+        "min_tap_target_pt": {
+          "type": "integer",
+          "minimum": 44,
+          "description": "最小タップ領域（pt）。Apple HIG推奨: 44"
+        },
+        "max_bundle_mb": {
+          "type": "number",
+          "minimum": 0,
+          "description": "最大バンドルサイズ（MB）"
+        },
+        "min_fps": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "最低フレームレート（fps）"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "colorPalette": {
+      "type": "object",
+      "required": ["primary", "bg", "label", "secondary_label", "separator"],
+      "additionalProperties": false,
+      "properties": {
+        "primary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "bg": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "label": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "secondary_label": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "separator": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+      }
+    }
+  }
+}

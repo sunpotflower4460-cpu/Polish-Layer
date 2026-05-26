@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "platform": "ios",
+  "references": [],
+  "category": "finance",
+  "design_system": {
+    "color": {
+      "mode": "auto",
+      "light": {
+        "primary": "#34C759",
+        "bg": "#F2F2F7",
+        "label": "#000000",
+        "secondary_label": "#3C3C43",
+        "separator": "#C6C6C8"
+      },
+      "dark": {
+        "primary": "#30D158",
+        "bg": "#000000",
+        "label": "#FFFFFF",
+        "secondary_label": "#EBEBF5",
+        "separator": "#38383A"
+      },
+      "semantic": "iOS system colors準拠。primary は収益・成功・残高増加を示すグリーン"
+    },
+    "typography": {
+      "family": "SF Pro",
+      "scale": "iOS Dynamic Type",
+      "weights": [400, 500, 600, 700]
+    },
+    "spacing": {
+      "base": 4,
+      "scale": [4, 8, 12, 16, 24, 32, 48]
+    },
+    "corner_radius": {
+      "card": 12,
+      "button": 12,
+      "sheet": 16
+    },
+    "elevation": "flat"
+  },
+  "motion": {
+    "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+    "duration": { "micro": 150, "standard": 300, "emphasized": 500 },
+    "spring": { "stiffness": 200, "damping": 30 }
+  },
+  "sound": {
+    "enabled": true,
+    "ui_se_set": "subtle_haptic_complement",
+    "loudness_target_lufs": -16
+  },
+  "copy": {
+    "tone": "friendly_professional",
+    "person": "second",
+    "locale": ["ja", "en"]
+  },
+  "qc_thresholds": {
+    "wcag": "AA",
+    "min_tap_target_pt": 44,
+    "max_bundle_mb": 50,
+    "min_fps": 60
+  }
+}
