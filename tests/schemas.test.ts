@@ -1,5 +1,4 @@
 import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
 
 import {
   ErrorResponseSchema,
@@ -152,7 +151,7 @@ describe('schemas', () => {
   });
 
   test('style bible template allows missing version while finalized schema requires version', () => {
-    const templatePath = resolve(process.cwd(), 'templates/style-bible/productivity.json');
+    const templatePath = resolveFromRoot('templates/style-bible/productivity.json');
     const template = JSON.parse(readFileSync(templatePath, 'utf-8')) as Record<string, unknown>;
     const withoutVersion = { ...template };
     delete withoutVersion.version;
@@ -177,7 +176,7 @@ describe('schemas', () => {
   test('all committed style-bible templates satisfy template schema', () => {
     const categories = InitProjectInputSchema.shape.category.options;
     for (const category of categories) {
-      const templatePath = resolve(process.cwd(), `templates/style-bible/${category}.json`);
+      const templatePath = resolveFromRoot(`templates/style-bible/${category}.json`);
       const template = JSON.parse(readFileSync(templatePath, 'utf-8'));
       expect(() => StyleBibleTemplateSchema.parse(template)).not.toThrow();
     }
