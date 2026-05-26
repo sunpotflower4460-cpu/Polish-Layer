@@ -32,6 +32,25 @@ AIエージェントがモバイルアプリを作る際の品質を「毎回大
 
 読まずに実装を始めることは禁止。
 
+## 必読ファイル（実装前に必ず参照）
+
+実装作業を開始する前に、以下のファイルを必ず読むこと。
+
+| ファイル | 目的 |
+|---|---|
+| `docs/00_workshop_master_plan.md` | 全体方針（最重要） |
+| `docs/02_architecture.md` | アーキテクチャ |
+| `docs/04_mcp-api-spec.md` | MCP API 仕様 |
+| `docs/05_connectors.md` | コネクタ仕様 |
+| `AGENTS.md`（本ファイル） | 運用ルール |
+
+以下は後続 PR で追加予定（追加され次第、本リストに加える）:
+- `docs/quality-criteria.md` （素材品質基準）
+- `docs/antipatterns.md` （反パターン集）
+- `docs/styles/*.md` （スタイル基準）
+- `docs/layouts/*.md` （配置パターン基準）
+- `docs/curation-criteria.md` （AI Vision キュレーション基準）
+
 ---
 
 ## 4. 現在のフェーズと作業範囲
