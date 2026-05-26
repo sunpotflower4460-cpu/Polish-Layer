@@ -1,9 +1,6 @@
 import { createServer, TOOL_DEFINITIONS } from '../src/mcp/server.js';
 import {
-  GetAnimationInputSchema,
-  GetIconInputSchema,
   GetScreenInputSchema,
-  GetSoundInputSchema,
   InitProjectInputSchema,
   QcCheckInputSchema,
 } from '../src/mcp/schemas/index.js';

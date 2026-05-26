@@ -12,21 +12,19 @@ export function getProjectRoot(): string {
   let current = dirname(fileURLToPath(import.meta.url));
   const visited: string[] = [];
 
-  while (true) {
+  while (current !== dirname(current)) {
     visited.push(current);
     if (existsSync(resolve(current, 'package.json'))) {
       cachedRoot = current;
       return current;
     }
-
-    const parent = dirname(current);
-    if (parent === current) {
-      throw new Error(
-        `Polish Layer: could not locate project root (package.json) from ${visited.join(' -> ')}`,
-      );
-    }
-    current = parent;
+    current = dirname(current);
   }
+
+  visited.push(current);
+  throw new Error(
+    `Polish Layer: could not locate project root (package.json) from ${visited.join(' -> ')}`,
+  );
 }
 
 export function resolveFromRoot(...segments: string[]): string {
