@@ -1,3 +1,6 @@
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
 import {
   ErrorResponseSchema,
   GetAnimationInputSchema,
@@ -7,6 +10,8 @@ import {
   InitProjectInputSchema,
   LicenseInfoSchema,
   QcCheckInputSchema,
+  StyleBibleSchema,
+  StyleBibleTemplateSchema,
 } from '../src/mcp/schemas/index.js';
 
 describe('schemas', () => {
@@ -143,5 +148,29 @@ describe('schemas', () => {
         },
       }),
     ).toThrow();
+  });
+
+  test('style bible template allows missing version while finalized schema requires version', () => {
+    const templatePath = resolve(process.cwd(), 'templates/style-bible/productivity.json');
+    const template = JSON.parse(readFileSync(templatePath, 'utf-8')) as Record<string, unknown>;
+    const withoutVersion = { ...template };
+    delete withoutVersion.version;
+
+    expect(() => StyleBibleTemplateSchema.parse(withoutVersion)).not.toThrow();
+    expect(() =>
+      StyleBibleSchema.parse({
+        ...withoutVersion,
+        project_id: crypto.randomUUID(),
+      }),
+    ).toThrow();
+  });
+
+  test('all committed style-bible templates satisfy template schema', () => {
+    const categories = ['productivity', 'social', 'finance', 'health', 'utility'];
+    for (const category of categories) {
+      const templatePath = resolve(process.cwd(), `templates/style-bible/${category}.json`);
+      const template = JSON.parse(readFileSync(templatePath, 'utf-8'));
+      expect(() => StyleBibleTemplateSchema.parse(template)).not.toThrow();
+    }
   });
 });

@@ -27,92 +27,104 @@ const ColorPaletteSchema = z
   })
   .strict();
 
-const StyleBibleBaseSchema = z
+const DesignSystemSchema = z
   .object({
-    version: z.string().regex(/^\d+\.\d+\.\d+$/),
-    platform: z.enum(['ios', 'android', 'both']),
-    references: z.array(z.string()),
-    category: z.enum(['productivity', 'social', 'finance', 'health', 'utility']),
-    design_system: z
+    color: z
       .object({
-        color: z
-          .object({
-            mode: z.enum(['auto', 'light', 'dark']),
-            light: ColorPaletteSchema,
-            dark: ColorPaletteSchema,
-            semantic: z.string().optional(),
-          })
-          .strict(),
-        typography: z
-          .object({
-            family: z.string(),
-            scale: z.string(),
-            weights: z.array(z.number().int().min(100).max(900).multipleOf(100)),
-          })
-          .strict(),
-        spacing: z
-          .object({
-            base: z.number().int().min(1),
-            scale: z.array(z.number().int().min(0)),
-          })
-          .strict(),
-        corner_radius: z
-          .object({
-            card: z.number().min(0),
-            button: z.number().min(0),
-            sheet: z.number().min(0),
-          })
-          .strict(),
-        elevation: z.enum(['subtle', 'flat', 'strong']),
+        mode: z.enum(['auto', 'light', 'dark']),
+        light: ColorPaletteSchema,
+        dark: ColorPaletteSchema,
+        semantic: z.string().optional(),
       })
       .strict(),
-    motion: z
+    typography: z
       .object({
-        easing: z.string(),
-        duration: z
-          .object({
-            micro: z.number().int().min(0),
-            standard: z.number().int().min(0),
-            emphasized: z.number().int().min(0),
-          })
-          .strict(),
-        spring: z
-          .object({
-            stiffness: z.number().min(0),
-            damping: z.number().min(0),
-          })
-          .strict(),
+        family: z.string(),
+        scale: z.string(),
+        weights: z.array(z.number().int().min(100).max(900).multipleOf(100)),
       })
       .strict(),
-    sound: z
+    spacing: z
       .object({
-        enabled: z.boolean(),
-        ui_se_set: z.enum(['subtle_haptic_complement', 'rich', 'minimal']),
-        loudness_target_lufs: z.number(),
+        base: z.number().int().min(1),
+        scale: z.array(z.number().int().min(0)),
       })
       .strict(),
-    copy: z
+    corner_radius: z
       .object({
-        tone: z.enum(['friendly_professional', 'playful', 'formal']),
-        person: z.enum(['first', 'second', 'third']),
-        locale: z.array(z.string().regex(/^[a-z]{2}$/)).min(1),
+        card: z.number().min(0),
+        button: z.number().min(0),
+        sheet: z.number().min(0),
       })
       .strict(),
-    qc_thresholds: z
+    elevation: z.enum(['subtle', 'flat', 'strong']),
+  })
+  .strict();
+
+const MotionSchema = z
+  .object({
+    easing: z.string(),
+    duration: z
       .object({
-        wcag: z.enum(['AA', 'AAA']),
-        min_tap_target_pt: z.number().int().min(44),
-        max_bundle_mb: z.number().min(0),
-        min_fps: z.number().int().min(0),
+        micro: z.number().int().min(0),
+        standard: z.number().int().min(0),
+        emphasized: z.number().int().min(0),
+      })
+      .strict(),
+    spring: z
+      .object({
+        stiffness: z.number().min(0),
+        damping: z.number().min(0),
       })
       .strict(),
   })
   .strict();
 
-export const StyleBibleTemplateSchema = StyleBibleBaseSchema;
+const SoundSchema = z
+  .object({
+    enabled: z.boolean(),
+    ui_se_set: z.enum(['subtle_haptic_complement', 'rich', 'minimal']),
+    loudness_target_lufs: z.number(),
+  })
+  .strict();
 
-export const StyleBibleSchema = StyleBibleBaseSchema.extend({
+const CopySchema = z
+  .object({
+    tone: z.enum(['friendly_professional', 'playful', 'formal']),
+    person: z.enum(['first', 'second', 'third']),
+    locale: z.array(z.string().regex(/^[a-z]{2}$/)).min(1),
+  })
+  .strict();
+
+const QcThresholdsSchema = z
+  .object({
+    wcag: z.enum(['AA', 'AAA']),
+    min_tap_target_pt: z.number().int().min(44),
+    max_bundle_mb: z.number().min(0),
+    min_fps: z.number().int().min(0),
+  })
+  .strict();
+
+const StyleBibleCoreSchema = z
+  .object({
+    platform: z.enum(['ios', 'android', 'both']),
+    references: z.array(z.string()),
+    category: z.enum(['productivity', 'social', 'finance', 'health', 'utility']),
+    design_system: DesignSystemSchema,
+    motion: MotionSchema,
+    sound: SoundSchema,
+    copy: CopySchema,
+    qc_thresholds: QcThresholdsSchema,
+  })
+  .strict();
+
+export const StyleBibleTemplateSchema = StyleBibleCoreSchema.extend({
+  version: z.string().regex(/^\d+\.\d+\.\d+$/).optional(),
+}).strict();
+
+export const StyleBibleSchema = StyleBibleCoreSchema.extend({
   project_id: z.string().uuid(),
+  version: z.string().regex(/^\d+\.\d+\.\d+$/),
 }).strict();
 
 export const InitProjectInputSchema = z

@@ -43,7 +43,7 @@ export async function initProject(rawInput: unknown): Promise<Output> {
     platform: input.platform,
     references: input.references,
     project_id: projectId,
-    version: template.version,
+    version: template.version ?? '1.0.0',
   });
   if (!parsedStyleBible.success) {
     throw new OutputValidationError('init_project style_bible failed schema validation', parsedStyleBible.error);
