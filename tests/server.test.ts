@@ -1,6 +1,11 @@
+import { z } from 'zod';
+
 import { createServer, TOOL_DEFINITIONS } from '../src/mcp/server.js';
 import {
+  GetAnimationInputSchema,
+  GetIconInputSchema,
   GetScreenInputSchema,
+  GetSoundInputSchema,
   InitProjectInputSchema,
   QcCheckInputSchema,
 } from '../src/mcp/schemas/index.js';
@@ -11,6 +16,12 @@ function getRequiredKeys(schema: Record<string, unknown>): string[] {
     return [];
   }
   return required.filter((value): value is string => typeof value === 'string');
+}
+
+function getZodRequiredKeys(schema: z.ZodObject<z.ZodRawShape>): string[] {
+  return Object.entries(schema.shape)
+    .filter(([, value]) => !(value as z.ZodTypeAny).isOptional())
+    .map(([key]) => key);
 }
 
 describe('mcp server', () => {
@@ -27,14 +38,14 @@ describe('mcp server', () => {
     }
   });
 
-  test('generated tool inputSchema required fields align with zod contracts', () => {
+  test('generated tool inputSchema required fields exactly match zod contracts', () => {
     const expectedRequiredByTool: Record<string, string[]> = {
-      'polish.init_project': Object.keys(InitProjectInputSchema.shape),
-      'polish.get_screen': Object.keys(GetScreenInputSchema.shape),
-      'polish.get_icon': ['project_id', 'semantic'],
-      'polish.get_animation': ['project_id', 'intent'],
-      'polish.get_sound': ['project_id', 'event'],
-      'polish.qc_check': Object.keys(QcCheckInputSchema.shape),
+      'polish.init_project': getZodRequiredKeys(InitProjectInputSchema),
+      'polish.get_screen': getZodRequiredKeys(GetScreenInputSchema),
+      'polish.get_icon': getZodRequiredKeys(GetIconInputSchema),
+      'polish.get_animation': getZodRequiredKeys(GetAnimationInputSchema),
+      'polish.get_sound': getZodRequiredKeys(GetSoundInputSchema),
+      'polish.qc_check': getZodRequiredKeys(QcCheckInputSchema),
     };
 
     for (const tool of TOOL_DEFINITIONS) {
@@ -42,9 +53,7 @@ describe('mcp server', () => {
       expect(expectedRequired).toBeDefined();
 
       const required = getRequiredKeys(tool.inputSchema);
-      for (const key of expectedRequired) {
-        expect(required).toContain(key);
-      }
+      expect(new Set(required)).toEqual(new Set(expectedRequired));
     }
   });
 });
