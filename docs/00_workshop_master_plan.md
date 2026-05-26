@@ -80,6 +80,8 @@ Polish Layer 工房
 | 11 | `polish.get_recipe` | カテゴリ別レシピ | ⏳ Phase γ |
 | 12 | `polish.list_shelf` | 棚の中身一覧 | ⏳ Phase ε |
 | 13 | `polish.remove_from_shelf` | キュレーション削除 | ⏳ Phase ε |
+| – | `polish.get_screen` | コード生成（旧計画） | ⚠️ Deprecated（darake 側へ移管） |
+| – | `polish.qc_check` | QC 検査（旧計画） | ⚠️ Deprecated（darake 側へ移管） |
 
 ### 3.1 廃止予定メソッド
 
