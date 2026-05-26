@@ -13,6 +13,7 @@ import {
   StyleBibleSchema,
   StyleBibleTemplateSchema,
 } from '../src/mcp/schemas/index.js';
+import { resolveFromRoot } from '../src/utils/paths.js';
 
 describe('schemas', () => {
   test('accepts valid inputs', () => {
@@ -163,6 +164,14 @@ describe('schemas', () => {
         project_id: crypto.randomUUID(),
       }),
     ).toThrow();
+  });
+
+  test('style bible template rejects project_id field', () => {
+    const templatePath = resolveFromRoot('templates/style-bible/productivity.json');
+    const template = JSON.parse(readFileSync(templatePath, 'utf-8')) as Record<string, unknown>;
+    const withProjectId = { ...template, project_id: crypto.randomUUID() };
+
+    expect(() => StyleBibleTemplateSchema.parse(withProjectId)).toThrow();
   });
 
   test('all committed style-bible templates satisfy template schema', () => {
