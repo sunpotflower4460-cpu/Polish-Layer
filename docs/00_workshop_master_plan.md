@@ -58,6 +58,7 @@ Polish Layer 工房
 | `all` | 接続経由で都度取得、フォールバック用（数万〜数十万） |
 
 素材を棚に振り分ける際の判定基準は `docs/quality-criteria.md` に、棚に並べてはいけない反パターンは `docs/antipatterns.md` に定義されている。
+提供される棚は `signature` / `curated` / `all` の 3 種。`pending` は人間レビュー待ちキュー、`reject` は却下ログで、いずれも API 応答には含めない。
 
 ### 2.2 取得確実性 3 層冗長化
 
