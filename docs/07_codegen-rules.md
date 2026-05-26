@@ -11,6 +11,7 @@
 - Style Bible の値は変数参照（直書き禁止）
 - アクセシビリティ属性を必ず付与
 - Dark Mode 対応コードを必ず含める
+- `license_info.attribution_required === true` のアセットを含む生成物には、`CREDITS.md`（または対応するクレジット表記ファイル）を**同時に emit する**。記載内容は `source_url` と `type` を最低限含むこと。
 
 ## SwiftUI 規約
 
@@ -148,7 +149,7 @@ color: sb.color.primary
 
 ```swift
 // polish-layer: generated
-// style-bible-version: v1
+// style-bible-version: 1.0.0
 // qc-passed: true
 // generated-at: 2024-01-01T00:00:00Z
 ```
