@@ -4,7 +4,7 @@ import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprot
 import { zodToJsonSchema } from 'zod-to-json-schema';
 import { ZodError, type z } from 'zod';
 
-import { OutputValidationError } from './errors.js';
+import { OutputValidationError, ConnectorNotImplementedError } from './errors.js';
 import { getAnimation } from './methods/get-animation.js';
 import { getIcon } from './methods/get-icon.js';
 import { getScreen } from './methods/get-screen.js';
@@ -22,7 +22,7 @@ import {
 } from './schemas/index.js';
 import { readPackageVersion } from '../utils/paths.js';
 
-type ErrorCode = 'INVALID_INPUT' | 'PROJECT_NOT_FOUND' | 'UPSTREAM_ERROR' | 'LICENSE_RESTRICTED' | 'RATE_LIMITED';
+type ErrorCode = 'INVALID_INPUT' | 'PROJECT_NOT_FOUND' | 'UPSTREAM_ERROR' | 'LICENSE_RESTRICTED' | 'RATE_LIMITED' | 'NOT_IMPLEMENTED';
 
 type ToolHandler = (rawInput: unknown) => Promise<unknown>;
 
@@ -44,6 +44,12 @@ function createErrorResponse(code: ErrorCode, message: string, details: Record<s
 }
 
 function toToolError(error: unknown) {
+  if (error instanceof ConnectorNotImplementedError) {
+    return createErrorResponse('NOT_IMPLEMENTED', error.message, {
+      connector: error.connectorName,
+    });
+  }
+
   if (error instanceof OutputValidationError) {
     return createErrorResponse('UPSTREAM_ERROR', error.message, {
       kind: 'output_validation',

@@ -186,6 +186,12 @@ export const GetIconOutputSchema = z
           source: z.enum(['sf-symbols', 'iconify', 'lucide', 'phosphor']),
           preview_url: z.string().min(1),
           license_info: LicenseInfoSchema,
+          metadata: z
+            .object({
+              category: z.string().optional(),
+              ios_min_version: z.string().optional(),
+            })
+            .optional(),
         })
         .strict(),
     ),
@@ -273,6 +279,7 @@ export const ErrorResponseSchema = z
           'UPSTREAM_ERROR',
           'LICENSE_RESTRICTED',
           'RATE_LIMITED',
+          'NOT_IMPLEMENTED',
         ]),
         message: z.string(),
         details: z.record(z.unknown()).default({}),

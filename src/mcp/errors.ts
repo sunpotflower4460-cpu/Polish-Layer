@@ -9,3 +9,10 @@ export class OutputValidationError extends Error {
     this.name = 'OutputValidationError';
   }
 }
+
+export class ConnectorNotImplementedError extends Error {
+  constructor(public readonly connectorName: string) {
+    super(`Connector not implemented: ${connectorName} (will be added in Phase 2B)`);
+    this.name = 'ConnectorNotImplementedError';
+  }
+}

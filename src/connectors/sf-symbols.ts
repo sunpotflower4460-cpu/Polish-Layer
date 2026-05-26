@@ -1,5 +1,7 @@
 import { readFileSync } from 'node:fs';
 
+import { z } from 'zod';
+
 import type { Connector } from './base.js';
 import type { GetIconOutput, LicenseInfo } from '../mcp/schemas/index.js';
 import { resolveFromRoot } from '../utils/paths.js';
@@ -10,15 +12,34 @@ type SfSymbolsQuery = {
 
 type GetIconCandidate = GetIconOutput['candidates'][number];
 
-type SfSymbolRecord = {
-  name: string;
-  tags: string[];
-  category: string;
-  ios_min_version: string;
-};
+export const SfSymbolEntrySchema = z
+  .object({
+    name: z.string().min(1),
+    tags: z.array(z.string()),
+    category: z.string().min(1),
+    ios_min_version: z.string().min(1),
+  })
+  .strict();
 
-const SF_SYMBOLS_DB_PATH = resolveFromRoot('src/connectors/data/sf-symbols.json');
-const sfSymbolsData = JSON.parse(readFileSync(SF_SYMBOLS_DB_PATH, 'utf-8')) as SfSymbolRecord[];
+export type SfSymbolRecord = z.infer<typeof SfSymbolEntrySchema>;
+
+function loadSfSymbolsData(): SfSymbolRecord[] {
+  const dbPath = resolveFromRoot('assets/sf-symbols/sf-symbols.json');
+  const raw: unknown = JSON.parse(readFileSync(dbPath, 'utf-8'));
+  const entries = z.array(SfSymbolEntrySchema).parse(raw);
+
+  const seen = new Set<string>();
+  for (const entry of entries) {
+    if (seen.has(entry.name)) {
+      throw new Error(`Duplicate SF Symbol name: ${entry.name}`);
+    }
+    seen.add(entry.name);
+  }
+
+  return entries;
+}
+
+const sfSymbolsData = loadSfSymbolsData();
 
 const SF_SYMBOLS_LICENSE: LicenseInfo = {
   type: 'apple-system',
@@ -44,25 +65,14 @@ function getTagScore(query: string, tag: string): number {
   return 0;
 }
 
-function isSfSymbolRecord(value: unknown): value is SfSymbolRecord {
-  if (!value || typeof value !== 'object') {
-    return false;
-  }
-  const candidate = value as Partial<SfSymbolRecord>;
-  return (
-    typeof candidate.name === 'string' &&
-    Array.isArray(candidate.tags) &&
-    candidate.tags.every((tag) => typeof tag === 'string') &&
-    typeof candidate.category === 'string' &&
-    typeof candidate.ios_min_version === 'string'
-  );
-}
-
 export class SfSymbolsConnector implements Connector<SfSymbolsQuery, GetIconCandidate> {
   public readonly name = 'sf-symbols';
 
   public async search(query: SfSymbolsQuery): Promise<GetIconCandidate[]> {
     const normalizedQuery = normalizeText(query.semantic);
+    if (normalizedQuery === '') {
+      return [];
+    }
     const scored = sfSymbolsData
       .map((item) => {
         const bestScore = item.tags.reduce((maxScore, rawTag) => {
@@ -88,10 +98,7 @@ export class SfSymbolsConnector implements Connector<SfSymbolsQuery, GetIconCand
   }
 
   public normalize(raw: unknown): GetIconCandidate {
-    if (!isSfSymbolRecord(raw)) {
-      throw new Error('sf-symbols normalize received invalid record');
-    }
-    const item = raw;
+    const item = SfSymbolEntrySchema.parse(raw);
     const base = {
       name: item.name,
       source: 'sf-symbols' as const,
@@ -100,6 +107,10 @@ export class SfSymbolsConnector implements Connector<SfSymbolsQuery, GetIconCand
     const candidate: GetIconCandidate = {
       ...base,
       license_info: this.getLicenseInfo({ ...base, license_info: SF_SYMBOLS_LICENSE }),
+      metadata: {
+        category: item.category,
+        ios_min_version: item.ios_min_version,
+      },
     };
     return candidate;
   }

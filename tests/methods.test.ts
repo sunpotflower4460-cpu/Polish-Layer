@@ -80,14 +80,14 @@ describe('methods', () => {
     await expect(getIcon({ project_id: 'not-a-uuid', semantic: '設定' })).rejects.toBeInstanceOf(ZodError);
   });
 
-  test('get_icon with iconify returns Phase 2A upstream error message', async () => {
+  test('get_icon with iconify returns NOT_IMPLEMENTED error code', async () => {
     await expect(
       getIcon({
         project_id: crypto.randomUUID(),
         semantic: '設定',
         preferred_source: 'iconify',
       }),
-    ).rejects.toThrow('Connector not implemented in Phase 2A (will be added in Phase 2B)');
+    ).rejects.toMatchObject({ name: 'ConnectorNotImplementedError' });
   });
 
   test('output schema mismatch throws OutputValidationError', async () => {
