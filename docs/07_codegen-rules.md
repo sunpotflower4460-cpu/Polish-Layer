@@ -1,5 +1,7 @@
 # 07. コード生成規約
 
+> ⚠️ **LEGACY / Deprecated**: この文書は旧計画（アプリ MVP 実行者構想）に基づく仕様です。Polish Layer は現在「darake-dev-app-AI の素材工房バックエンド」へ方針転換しており、本文書の内容の大部分は darake-dev-app-AI 側の責務に移管されました。最新方針は `docs/00_workshop_master_plan.md` を参照してください。
+
 ## 概要
 
 `polish.get_screen` が返すコード片は以下の規約に従う。エージェントがそのまま組み込んでもプロジェクトが破綻しない品質を保つ。

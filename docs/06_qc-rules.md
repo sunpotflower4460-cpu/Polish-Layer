@@ -1,5 +1,7 @@
 # 06. QC Gate ルール
 
+> ⚠️ **LEGACY / Deprecated**: この文書は旧計画（アプリ MVP 実行者構想）に基づく仕様です。Polish Layer は現在「darake-dev-app-AI の素材工房バックエンド」へ方針転換しており、本文書の内容の大部分は darake-dev-app-AI 側の責務に移管されました。最新方針は `docs/00_workshop_master_plan.md` を参照してください。
+
 ## 概要
 
 QC Gate は生成物が App Store Review Guidelines と Apple HIG、WCAG に準拠しているかを自動検査する。違反は重大度別に分類し、`error` は必ず差し戻し、`warning` は通知のみ。

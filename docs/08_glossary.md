@@ -1,5 +1,7 @@
 # 08. 用語集
 
+> ⚠️ **LEGACY / Deprecated**: この文書は旧計画（アプリ MVP 実行者構想）に基づく仕様です。Polish Layer は現在「darake-dev-app-AI の素材工房バックエンド」へ方針転換しており、本文書の内容の大部分は darake-dev-app-AI 側の責務に移管されました。最新方針は `docs/00_workshop_master_plan.md` を参照してください。
+
 このファイルはプロジェクト内で使用する用語の定義集。不明な用語はまずここを参照すること。
 
 ---
