@@ -15,13 +15,20 @@ import {
 type Output = z.infer<typeof InitProjectOutputSchema>;
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
+const TEMPLATE_FILES = {
+  productivity: 'productivity.json',
+  social: 'social.json',
+  finance: 'finance.json',
+  health: 'health.json',
+  utility: 'utility.json',
+} as const;
 
 export async function initProject(rawInput: unknown): Promise<Output> {
   const input = InitProjectInputSchema.parse(rawInput);
 
   // TODO(Phase 3): Replace template-only bootstrap with generated Style Bible refinement.
 
-  const templatePath = resolve(currentDir, '../../../templates/style-bible', `${input.category}.json`);
+  const templatePath = resolve(currentDir, '../../../templates/style-bible', TEMPLATE_FILES[input.category]);
   const templateText = await readFile(templatePath, 'utf-8');
   const template = StyleBibleTemplateSchema.parse(JSON.parse(templateText));
   const projectId = randomUUID();

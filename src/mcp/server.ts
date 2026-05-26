@@ -26,9 +26,14 @@ type ToolDefinition = {
 };
 
 function readPackageVersion(): string {
-  const packageJsonPath = resolve(process.cwd(), 'package.json');
-  const parsed = JSON.parse(readFileSync(packageJsonPath, 'utf-8')) as { version?: string };
-  return parsed.version ?? '0.0.0';
+  try {
+    const packageJsonPath = resolve(process.cwd(), 'package.json');
+    const parsed = JSON.parse(readFileSync(packageJsonPath, 'utf-8')) as { version?: string };
+    return parsed.version ?? '0.0.0';
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to read package version from package.json: ${message}`);
+  }
 }
 
 function createErrorResponse(code: ErrorCode, message: string, details: Record<string, unknown> = {}) {
