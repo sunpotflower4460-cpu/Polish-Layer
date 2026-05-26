@@ -73,6 +73,7 @@ interface LicenseInfo {
 外部認証不要なものから順に：
 
 1. SF Symbols（ローカルJSON同梱）
+   - [x] 実装済み (PR-A)
 2. Iconify（無認証）
 3. Google Fonts（無料APIキー）
 4. LottieFiles
@@ -88,3 +89,6 @@ interface LicenseInfo {
 
 - **なぜ SF Symbols を最優先か**：iOS純正の手触りが圧倒的で、これ1つで「らしさ」が出る。
 - **なぜ Iconify を採用するか**：150万点をひとつの API で扱える集約効果が大きい。
+- **なぜグリフ画像を同梱しないか**：Apple利用規約上、SF Symbolsグリフ（SVG/PNG等）の再配布ができないため。名前文字列とメタデータのみ保持する。
+- **なぜ名前ベース検索か**：iOS側で `Image(systemName:)` を使って描画できるため、シンボル名を返せば十分にレンダリング可能。
+- **SF Symbols 実装補足（PR-A）**：データソースはローカル同梱 JSON（名前・タグ・カテゴリ・最低iOSバージョン）。検索はタグに対する完全一致 > 前方一致 > 部分一致で最大10件を返却。ライセンスは `apple-system` を全候補に付与する。

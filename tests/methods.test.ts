@@ -20,7 +20,7 @@ import {
 import { resolveFromRoot } from '../src/utils/paths.js';
 
 describe('methods', () => {
-  test('all stub methods return schema-valid dummy responses', async () => {
+  test('methods return schema-valid responses (including remaining stubs)', async () => {
     const project_id = crypto.randomUUID();
 
     const screen = await getScreen({ project_id, intent: 'ログイン画面', framework: 'swiftui' });
@@ -78,6 +78,16 @@ describe('methods', () => {
 
   test('invalid input throws ZodError', async () => {
     await expect(getIcon({ project_id: 'not-a-uuid', semantic: '設定' })).rejects.toBeInstanceOf(ZodError);
+  });
+
+  test('get_icon with iconify returns Phase 2A upstream error message', async () => {
+    await expect(
+      getIcon({
+        project_id: crypto.randomUUID(),
+        semantic: '設定',
+        preferred_source: 'iconify',
+      }),
+    ).rejects.toThrow('Connector not implemented in Phase 2A (will be added in Phase 2B)');
   });
 
   test('output schema mismatch throws OutputValidationError', async () => {
