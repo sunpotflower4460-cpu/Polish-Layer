@@ -6,6 +6,7 @@ import { ZodError, type z } from 'zod';
 
 import { OutputValidationError, ConnectorNotImplementedError } from './errors.js';
 import { getAnimation } from './methods/get-animation.js';
+import { getFont } from './methods/get-font.js';
 import { getIcon } from './methods/get-icon.js';
 import { getScreen } from './methods/get-screen.js';
 import { getSound } from './methods/get-sound.js';
@@ -14,6 +15,7 @@ import { qcCheck } from './methods/qc-check.js';
 import {
   ErrorResponseSchema,
   GetAnimationInputSchema,
+  GetFontInputSchema,
   GetIconInputSchema,
   GetScreenInputSchema,
   GetSoundInputSchema,
@@ -21,8 +23,16 @@ import {
   QcCheckInputSchema,
 } from './schemas/index.js';
 import { readPackageVersion } from '../utils/paths.js';
+import { MissingEnvError } from '../utils/env.js';
 
-type ErrorCode = 'INVALID_INPUT' | 'PROJECT_NOT_FOUND' | 'UPSTREAM_ERROR' | 'LICENSE_RESTRICTED' | 'RATE_LIMITED' | 'NOT_IMPLEMENTED';
+type ErrorCode =
+  | 'INVALID_INPUT'
+  | 'PROJECT_NOT_FOUND'
+  | 'UPSTREAM_ERROR'
+  | 'LICENSE_RESTRICTED'
+  | 'RATE_LIMITED'
+  | 'MISSING_ENV'
+  | 'NOT_IMPLEMENTED';
 
 type ToolHandler = (rawInput: unknown) => Promise<unknown>;
 
@@ -63,6 +73,12 @@ function toToolError(error: unknown) {
     });
   }
 
+  if (error instanceof MissingEnvError) {
+    return createErrorResponse('MISSING_ENV', error.message, {
+      env: error.envName,
+    });
+  }
+
   const message = error instanceof Error ? error.message : 'Unknown upstream error';
   return createErrorResponse('UPSTREAM_ERROR', message);
 }
@@ -98,6 +114,12 @@ export const TOOL_DEFINITIONS: ToolDefinition[] = [
     description: 'Get animation candidates by intent',
     inputSchema: toMcpInputSchema(GetAnimationInputSchema),
     handler: getAnimation,
+  },
+  {
+    name: 'polish.get_font',
+    description: 'Search Google Fonts by family name or category. Returns up to 10 candidates with license info.',
+    inputSchema: toMcpInputSchema(GetFontInputSchema),
+    handler: getFont,
   },
   {
     name: 'polish.get_sound',

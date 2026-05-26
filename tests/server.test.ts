@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { createServer, TOOL_DEFINITIONS } from '../src/mcp/server.js';
 import {
   GetAnimationInputSchema,
+  GetFontInputSchema,
   GetIconInputSchema,
   GetScreenInputSchema,
   GetSoundInputSchema,
@@ -25,11 +26,12 @@ function getZodRequiredKeys(schema: z.ZodObject<z.ZodRawShape>): string[] {
 }
 
 describe('mcp server', () => {
-  test('server can be created and has six registered tools', () => {
+  test('server can be created and has seven registered tools', () => {
     const server = createServer();
 
     expect(server).toBeTruthy();
-    expect(TOOL_DEFINITIONS).toHaveLength(6);
+    expect(TOOL_DEFINITIONS).toHaveLength(7);
+    expect(TOOL_DEFINITIONS.some((tool) => tool.name === 'polish.get_font')).toBe(true);
   });
 
   test('tool names follow polish.* format', () => {
@@ -44,6 +46,7 @@ describe('mcp server', () => {
       'polish.get_screen': getZodRequiredKeys(GetScreenInputSchema),
       'polish.get_icon': getZodRequiredKeys(GetIconInputSchema),
       'polish.get_animation': getZodRequiredKeys(GetAnimationInputSchema),
+      'polish.get_font': getZodRequiredKeys(GetFontInputSchema),
       'polish.get_sound': getZodRequiredKeys(GetSoundInputSchema),
       'polish.qc_check': getZodRequiredKeys(QcCheckInputSchema),
     };

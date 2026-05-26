@@ -206,6 +206,34 @@ export const GetAnimationInputSchema = z
   })
   .strict();
 
+export const GetFontInputSchema = z
+  .object({
+    project_id: z.string().uuid(),
+    semantic: z.string().min(1),
+    category: z.enum(['sans-serif', 'serif', 'display', 'handwriting', 'monospace']).optional(),
+    max_results: z.number().int().min(1).max(20).default(10),
+  })
+  .strict();
+
+export const GetFontOutputSchema = z
+  .object({
+    candidates: z.array(
+      z
+        .object({
+          family: z.string(),
+          category: z.string(),
+          variants: z.array(z.string()),
+          subsets: z.array(z.string()),
+          source: z.literal('google-fonts'),
+          preview_url: z.string().url(),
+          license_info: LicenseInfoSchema,
+        })
+        .strict(),
+    ),
+    qc_passed: z.boolean().default(true),
+  })
+  .strict();
+
 export const GetAnimationOutputSchema = z
   .object({
     candidates: z.array(
@@ -279,6 +307,7 @@ export const ErrorResponseSchema = z
           'UPSTREAM_ERROR',
           'LICENSE_RESTRICTED',
           'RATE_LIMITED',
+          'MISSING_ENV',
           'NOT_IMPLEMENTED',
         ]),
         message: z.string(),
@@ -299,6 +328,8 @@ export type GetIconInput = z.infer<typeof GetIconInputSchema>;
 export type GetIconOutput = z.infer<typeof GetIconOutputSchema>;
 export type GetAnimationInput = z.infer<typeof GetAnimationInputSchema>;
 export type GetAnimationOutput = z.infer<typeof GetAnimationOutputSchema>;
+export type GetFontInput = z.infer<typeof GetFontInputSchema>;
+export type GetFontOutput = z.infer<typeof GetFontOutputSchema>;
 export type GetSoundInput = z.infer<typeof GetSoundInputSchema>;
 export type GetSoundOutput = z.infer<typeof GetSoundOutputSchema>;
 export type QcCheckInput = z.infer<typeof QcCheckInputSchema>;

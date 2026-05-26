@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import {
   ErrorResponseSchema,
   GetAnimationInputSchema,
+  GetFontInputSchema,
   GetIconInputSchema,
   GetScreenInputSchema,
   GetSoundInputSchema,
@@ -45,6 +46,14 @@ describe('schemas', () => {
         project_id: crypto.randomUUID(),
         intent: '成功時のチェックマーク',
         max_results: 3,
+      }),
+    ).not.toThrow();
+
+    expect(() =>
+      GetFontInputSchema.parse({
+        project_id: crypto.randomUUID(),
+        semantic: 'Roboto',
+        category: 'sans-serif',
       }),
     ).not.toThrow();
 
@@ -134,6 +143,16 @@ describe('schemas', () => {
         error: {
           code: 'INVALID_INPUT',
           message: 'bad',
+          details: {},
+        },
+      }),
+    ).not.toThrow();
+
+    expect(() =>
+      ErrorResponseSchema.parse({
+        error: {
+          code: 'MISSING_ENV',
+          message: 'missing env',
           details: {},
         },
       }),
