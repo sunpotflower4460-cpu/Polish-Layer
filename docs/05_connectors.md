@@ -75,7 +75,9 @@ interface LicenseInfo {
 1. SF Symbols（ローカルJSON同梱）
    - [x] 実装済み (PR-A)
 2. Iconify（無認証）
+   - [x] 実装済み (PR-B1)
 3. Google Fonts（無料APIキー）
+   - [x] 実装済み (PR-B1)
 4. LottieFiles
 5. freesound
 
@@ -92,3 +94,5 @@ interface LicenseInfo {
 - **なぜグリフ画像を同梱しないか**：Apple利用規約上、SF Symbolsグリフ（SVG/PNG等）の再配布ができないため。名前文字列とメタデータのみ保持する。
 - **なぜ名前ベース検索か**：iOS側で `Image(systemName:)` を使って描画できるため、シンボル名を返せば十分にレンダリング可能。
 - **SF Symbols 実装補足（PR-A）**：データソースはローカル同梱 JSON（名前・タグ・カテゴリ・最低iOSバージョン）。検索はタグに対する完全一致 > 前方一致 > 部分一致で最大10件を返却。ライセンスは `apple-system` を全候補に付与する。
+- **Iconify / Google Fonts のライセンス統一（PR-B1）**：MVP では返却候補を `free-commercial` に統一し、`license_info` を全候補に必須付与する。Iconify は本来プレフィックス単位、Google Fonts はフォント単位で詳細ライセンスが異なるが、Phase 3 で精密化する。
+- **Phase 3 での追加対応予定**：日本語クエリ翻訳層、Iconify プレフィックス別ライセンス判定、Google Fonts の意味検索（semantic expansion）を導入する。

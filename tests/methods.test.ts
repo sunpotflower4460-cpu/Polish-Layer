@@ -2,6 +2,8 @@ import { readFileSync } from 'node:fs';
 
 import { ZodError } from 'zod';
 
+import { iconifyConnector } from '../src/connectors/iconify.js';
+import { sfSymbolsConnector } from '../src/connectors/sf-symbols.js';
 import { OutputValidationError } from '../src/mcp/errors.js';
 import { getAnimation } from '../src/mcp/methods/get-animation.js';
 import { getIcon } from '../src/mcp/methods/get-icon.js';
@@ -80,15 +82,45 @@ describe('methods', () => {
     await expect(getIcon({ project_id: 'not-a-uuid', semantic: '設定' })).rejects.toBeInstanceOf(ZodError);
   });
 
-  test('get_icon with iconify returns NOT_IMPLEMENTED error code', async () => {
-    await expect(
-      getIcon({
-        project_id: crypto.randomUUID(),
-        semantic: '設定',
-        preferred_source: 'iconify',
-      }),
-    ).rejects.toMatchObject({ name: 'ConnectorNotImplementedError' });
+  test('get_icon with iconify uses iconify connector', async () => {
+    const searchSpy = vi.spyOn(iconifyConnector, 'search').mockResolvedValue([
+      {
+        name: 'mdi:home',
+        source: 'iconify',
+        preview_url: 'https://api.iconify.design/mdi/home.svg',
+        license_info: {
+          type: 'free-commercial',
+          attribution_required: false,
+          commercial_use: true,
+          source_url: 'https://iconify.design/docs/license/',
+        },
+      },
+    ]);
+
+    const result = await getIcon({
+      project_id: crypto.randomUUID(),
+      semantic: 'home',
+      preferred_source: 'iconify',
+    });
+
+    expect(result.candidates).toHaveLength(1);
+    expect(result.candidates[0]?.source).toBe('iconify');
+
+    searchSpy.mockRestore();
   });
+
+  test.each(['lucide', 'phosphor'] as const)(
+    'get_icon with %s still returns NOT_IMPLEMENTED',
+    async (preferred_source) => {
+      await expect(
+        getIcon({
+          project_id: crypto.randomUUID(),
+          semantic: 'home',
+          preferred_source,
+        }),
+      ).rejects.toMatchObject({ name: 'ConnectorNotImplementedError' });
+    },
+  );
 
   test('output schema mismatch throws OutputValidationError', async () => {
     const safeParseSpy = vi.spyOn(GetIconOutputSchema, 'safeParse');
@@ -97,6 +129,8 @@ describe('methods', () => {
       error: new ZodError([{ code: 'custom', message: 'test error', path: [] }]),
     });
 
+    const sfSearchSpy = vi.spyOn(sfSymbolsConnector, 'search').mockResolvedValue([]);
+
     await expect(
       getIcon({
         project_id: crypto.randomUUID(),
@@ -104,6 +138,7 @@ describe('methods', () => {
       }),
     ).rejects.toBeInstanceOf(OutputValidationError);
 
+    sfSearchSpy.mockRestore();
     safeParseSpy.mockRestore();
   });
 });
