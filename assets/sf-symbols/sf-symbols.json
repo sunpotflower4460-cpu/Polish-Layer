@@ -1,0 +1,6020 @@
+[
+  {
+    "name": "envelope",
+    "tags": [
+      "連絡",
+      "communication",
+      "envelope"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "envelope.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "envelope.fill",
+      "envelope fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "envelope.open",
+    "tags": [
+      "連絡",
+      "communication",
+      "envelope.open",
+      "envelope open"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "envelope.badge",
+    "tags": [
+      "連絡",
+      "communication",
+      "envelope.badge",
+      "envelope badge"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "envelope.badge.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "envelope.badge.fill",
+      "envelope badge fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "phone",
+    "tags": [
+      "連絡",
+      "communication",
+      "phone"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "phone.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "phone.fill",
+      "phone fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "phone.badge.plus",
+    "tags": [
+      "連絡",
+      "communication",
+      "phone.badge.plus",
+      "phone badge plus"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "phone.down",
+    "tags": [
+      "連絡",
+      "communication",
+      "phone.down",
+      "phone down"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "phone.down.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "phone.down.fill",
+      "phone down fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "message",
+    "tags": [
+      "連絡",
+      "communication",
+      "message"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "message.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "message.fill",
+      "message fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "message.badge",
+    "tags": [
+      "連絡",
+      "communication",
+      "message.badge",
+      "message badge"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "message.badge.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "message.badge.fill",
+      "message badge fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bubble.left",
+    "tags": [
+      "連絡",
+      "communication",
+      "bubble.left",
+      "bubble left"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bubble.left.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "bubble.left.fill",
+      "bubble left fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bubble.right",
+    "tags": [
+      "連絡",
+      "communication",
+      "bubble.right",
+      "bubble right"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bubble.right.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "bubble.right.fill",
+      "bubble right fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "quote.bubble",
+    "tags": [
+      "連絡",
+      "communication",
+      "quote.bubble",
+      "quote bubble"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "quote.bubble.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "quote.bubble.fill",
+      "quote bubble fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "video",
+    "tags": [
+      "連絡",
+      "communication",
+      "video"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "video.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "video.fill",
+      "video fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "video.badge.plus",
+    "tags": [
+      "連絡",
+      "communication",
+      "video.badge.plus",
+      "video badge plus"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "mic",
+    "tags": [
+      "連絡",
+      "communication",
+      "mic"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "mic.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "mic.fill",
+      "mic fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "mic.slash",
+    "tags": [
+      "連絡",
+      "communication",
+      "mic.slash",
+      "mic slash"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "mic.slash.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "mic.slash.fill",
+      "mic slash fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bell",
+    "tags": [
+      "連絡",
+      "communication",
+      "bell"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bell.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "bell.fill",
+      "bell fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bell.badge",
+    "tags": [
+      "連絡",
+      "communication",
+      "bell.badge",
+      "bell badge"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "megaphone",
+    "tags": [
+      "連絡",
+      "communication",
+      "megaphone"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "megaphone.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "megaphone.fill",
+      "megaphone fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "paperplane",
+    "tags": [
+      "連絡",
+      "communication",
+      "paperplane"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "paperplane.fill",
+    "tags": [
+      "連絡",
+      "communication",
+      "paperplane.fill",
+      "paperplane fill"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "at",
+    "tags": [
+      "連絡",
+      "communication",
+      "at"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "number",
+    "tags": [
+      "連絡",
+      "communication",
+      "number"
+    ],
+    "category": "communication",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sun.max",
+    "tags": [
+      "天気",
+      "weather",
+      "sun.max",
+      "sun max"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sun.max.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "sun.max.fill",
+      "sun max fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sunrise",
+    "tags": [
+      "天気",
+      "weather",
+      "sunrise"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sunrise.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "sunrise.fill",
+      "sunrise fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sunset",
+    "tags": [
+      "天気",
+      "weather",
+      "sunset"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sunset.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "sunset.fill",
+      "sunset fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "moon",
+    "tags": [
+      "天気",
+      "weather",
+      "moon"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "moon.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "moon.fill",
+      "moon fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "moon.stars",
+    "tags": [
+      "天気",
+      "weather",
+      "moon.stars",
+      "moon stars"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "moon.stars.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "moon.stars.fill",
+      "moon stars fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.fill",
+      "cloud fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.sun",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.sun",
+      "cloud sun"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.sun.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.sun.fill",
+      "cloud sun fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.moon",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.moon",
+      "cloud moon"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.moon.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.moon.fill",
+      "cloud moon fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.rain",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.rain",
+      "cloud rain"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.rain.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.rain.fill",
+      "cloud rain fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.heavyrain",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.heavyrain",
+      "cloud heavyrain"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.heavyrain.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.heavyrain.fill",
+      "cloud heavyrain fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.snow",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.snow",
+      "cloud snow"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.snow.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.snow.fill",
+      "cloud snow fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.bolt",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.bolt",
+      "cloud bolt"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cloud.bolt.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "cloud.bolt.fill",
+      "cloud bolt fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "wind",
+    "tags": [
+      "天気",
+      "weather",
+      "wind"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "snow",
+    "tags": [
+      "天気",
+      "weather",
+      "snow"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "thermometer",
+    "tags": [
+      "天気",
+      "weather",
+      "thermometer"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "umbrella",
+    "tags": [
+      "天気",
+      "weather",
+      "umbrella"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "umbrella.fill",
+    "tags": [
+      "天気",
+      "weather",
+      "umbrella.fill",
+      "umbrella fill"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tornado",
+    "tags": [
+      "天気",
+      "weather",
+      "tornado"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hurricane",
+    "tags": [
+      "天気",
+      "weather",
+      "hurricane"
+    ],
+    "category": "weather",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "house",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "house",
+      "ホーム",
+      "home"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "house.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "house.fill",
+      "house fill",
+      "ホーム",
+      "home"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "gearshape",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "gearshape",
+      "設定",
+      "settings",
+      "preferences",
+      "config",
+      "歯車"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "gearshape.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "gearshape.fill",
+      "gearshape fill",
+      "設定",
+      "settings",
+      "preferences",
+      "config",
+      "歯車"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "wrench",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "wrench"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "wrench.adjustable",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "wrench.adjustable",
+      "wrench adjustable"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hammer",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "hammer"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "screwdriver",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "screwdriver"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "scissors",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "scissors"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "folder",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "folder"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "folder.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "folder.fill",
+      "folder fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "folder.badge.plus",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "folder.badge.plus",
+      "folder badge plus"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "doc",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "doc"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "doc.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "doc.fill",
+      "doc fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "doc.text",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "doc.text",
+      "doc text"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "doc.text.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "doc.text.fill",
+      "doc text fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "trash",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "trash"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "trash.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "trash.fill",
+      "trash fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pencil",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "pencil"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pencil.circle",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "pencil.circle",
+      "pencil circle"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "paperclip",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "paperclip"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "link",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "link"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "key",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "key"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "key.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "key.fill",
+      "key fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lock",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "lock"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lock.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "lock.fill",
+      "lock fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lock.open",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "lock.open",
+      "lock open"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lock.open.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "lock.open.fill",
+      "lock open fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bookmark",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "bookmark"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bookmark.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "bookmark.fill",
+      "bookmark fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tag",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "tag"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tag.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "tag.fill",
+      "tag fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "gift",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "gift"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "gift.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "gift.fill",
+      "gift fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cart",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "cart"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cart.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "cart.fill",
+      "cart fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bag",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "bag"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bag.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "bag.fill",
+      "bag fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "creditcard",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "creditcard"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "creditcard.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "creditcard.fill",
+      "creditcard fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "camera",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "camera"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "camera.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "camera.fill",
+      "camera fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "photo",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "photo"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "photo.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "photo.fill",
+      "photo fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "printer",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "printer"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "printer.fill",
+    "tags": [
+      "オブジェクト",
+      "objects",
+      "printer.fill",
+      "printer fill"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "iphone",
+    "tags": [
+      "デバイス",
+      "devices",
+      "iphone"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "iphone.gen1",
+    "tags": [
+      "デバイス",
+      "devices",
+      "iphone.gen1",
+      "iphone gen1"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "iphone.gen2",
+    "tags": [
+      "デバイス",
+      "devices",
+      "iphone.gen2",
+      "iphone gen2"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "ipad",
+    "tags": [
+      "デバイス",
+      "devices",
+      "ipad"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "ipad.gen1",
+    "tags": [
+      "デバイス",
+      "devices",
+      "ipad.gen1",
+      "ipad gen1"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "ipad.gen2",
+    "tags": [
+      "デバイス",
+      "devices",
+      "ipad.gen2",
+      "ipad gen2"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "laptopcomputer",
+    "tags": [
+      "デバイス",
+      "devices",
+      "laptopcomputer"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "desktopcomputer",
+    "tags": [
+      "デバイス",
+      "devices",
+      "desktopcomputer"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "applewatch",
+    "tags": [
+      "デバイス",
+      "devices",
+      "applewatch"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "applewatch.watchface",
+    "tags": [
+      "デバイス",
+      "devices",
+      "applewatch.watchface",
+      "applewatch watchface"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "airpods",
+    "tags": [
+      "デバイス",
+      "devices",
+      "airpods"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "airpodspro",
+    "tags": [
+      "デバイス",
+      "devices",
+      "airpodspro"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "airpodsmax",
+    "tags": [
+      "デバイス",
+      "devices",
+      "airpodsmax"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "homepod",
+    "tags": [
+      "デバイス",
+      "devices",
+      "homepod"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "homepod.fill",
+    "tags": [
+      "デバイス",
+      "devices",
+      "homepod.fill",
+      "homepod fill"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "keyboard",
+    "tags": [
+      "デバイス",
+      "devices",
+      "keyboard"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "keyboard.fill",
+    "tags": [
+      "デバイス",
+      "devices",
+      "keyboard.fill",
+      "keyboard fill"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "computermouse",
+    "tags": [
+      "デバイス",
+      "devices",
+      "computermouse"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "magicmouse",
+    "tags": [
+      "デバイス",
+      "devices",
+      "magicmouse"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tv",
+    "tags": [
+      "デバイス",
+      "devices",
+      "tv"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "display",
+    "tags": [
+      "デバイス",
+      "devices",
+      "display"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "externaldrive",
+    "tags": [
+      "デバイス",
+      "devices",
+      "externaldrive"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "externaldrive.fill",
+    "tags": [
+      "デバイス",
+      "devices",
+      "externaldrive.fill",
+      "externaldrive fill"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "simcard",
+    "tags": [
+      "デバイス",
+      "devices",
+      "simcard"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "simcard.fill",
+    "tags": [
+      "デバイス",
+      "devices",
+      "simcard.fill",
+      "simcard fill"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "battery.100",
+    "tags": [
+      "デバイス",
+      "devices",
+      "battery.100",
+      "battery 100"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "battery.75",
+    "tags": [
+      "デバイス",
+      "devices",
+      "battery.75",
+      "battery 75"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "battery.50",
+    "tags": [
+      "デバイス",
+      "devices",
+      "battery.50",
+      "battery 50"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "battery.25",
+    "tags": [
+      "デバイス",
+      "devices",
+      "battery.25",
+      "battery 25"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "battery.0",
+    "tags": [
+      "デバイス",
+      "devices",
+      "battery.0",
+      "battery 0"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "battery.100.bolt",
+    "tags": [
+      "デバイス",
+      "devices",
+      "battery.100.bolt",
+      "battery 100 bolt"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "wifi",
+    "tags": [
+      "デバイス",
+      "devices",
+      "wifi"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "wifi.slash",
+    "tags": [
+      "デバイス",
+      "devices",
+      "wifi.slash",
+      "wifi slash"
+    ],
+    "category": "devices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "car",
+    "tags": [
+      "交通",
+      "transportation",
+      "car"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "car.fill",
+    "tags": [
+      "交通",
+      "transportation",
+      "car.fill",
+      "car fill"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "car.2",
+    "tags": [
+      "交通",
+      "transportation",
+      "car.2",
+      "car 2"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "car.2.fill",
+    "tags": [
+      "交通",
+      "transportation",
+      "car.2.fill",
+      "car 2 fill"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bus",
+    "tags": [
+      "交通",
+      "transportation",
+      "bus"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bus.fill",
+    "tags": [
+      "交通",
+      "transportation",
+      "bus.fill",
+      "bus fill"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tram",
+    "tags": [
+      "交通",
+      "transportation",
+      "tram"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tram.fill",
+    "tags": [
+      "交通",
+      "transportation",
+      "tram.fill",
+      "tram fill"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "train.side.front.car",
+    "tags": [
+      "交通",
+      "transportation",
+      "train.side.front.car",
+      "train side front car"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "ferry",
+    "tags": [
+      "交通",
+      "transportation",
+      "ferry"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "ferry.fill",
+    "tags": [
+      "交通",
+      "transportation",
+      "ferry.fill",
+      "ferry fill"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bicycle",
+    "tags": [
+      "交通",
+      "transportation",
+      "bicycle"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "scooter",
+    "tags": [
+      "交通",
+      "transportation",
+      "scooter"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "motorcycle",
+    "tags": [
+      "交通",
+      "transportation",
+      "motorcycle"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "airplane",
+    "tags": [
+      "交通",
+      "transportation",
+      "airplane"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "airplane.departure",
+    "tags": [
+      "交通",
+      "transportation",
+      "airplane.departure",
+      "airplane departure"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "airplane.arrival",
+    "tags": [
+      "交通",
+      "transportation",
+      "airplane.arrival",
+      "airplane arrival"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "fuelpump",
+    "tags": [
+      "交通",
+      "transportation",
+      "fuelpump"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "fuelpump.fill",
+    "tags": [
+      "交通",
+      "transportation",
+      "fuelpump.fill",
+      "fuelpump fill"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bolt.car",
+    "tags": [
+      "交通",
+      "transportation",
+      "bolt.car",
+      "bolt car"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "steeringwheel",
+    "tags": [
+      "交通",
+      "transportation",
+      "steeringwheel"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "steeringwheel.slash",
+    "tags": [
+      "交通",
+      "transportation",
+      "steeringwheel.slash",
+      "steeringwheel slash"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.walk.motion",
+    "tags": [
+      "交通",
+      "transportation",
+      "figure.walk.motion",
+      "figure walk motion"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.roll.runningpace",
+    "tags": [
+      "交通",
+      "transportation",
+      "figure.roll.runningpace",
+      "figure roll runningpace"
+    ],
+    "category": "transportation",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person",
+    "tags": [
+      "人物",
+      "human",
+      "person"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.fill",
+    "tags": [
+      "人物",
+      "human",
+      "person.fill",
+      "person fill"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.circle",
+    "tags": [
+      "人物",
+      "human",
+      "person.circle",
+      "person circle"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.circle.fill",
+    "tags": [
+      "人物",
+      "human",
+      "person.circle.fill",
+      "person circle fill"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.2",
+    "tags": [
+      "人物",
+      "human",
+      "person.2",
+      "person 2"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.2.fill",
+    "tags": [
+      "人物",
+      "human",
+      "person.2.fill",
+      "person 2 fill"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.3",
+    "tags": [
+      "人物",
+      "human",
+      "person.3",
+      "person 3"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.3.fill",
+    "tags": [
+      "人物",
+      "human",
+      "person.3.fill",
+      "person 3 fill"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.crop.circle",
+    "tags": [
+      "人物",
+      "human",
+      "person.crop.circle",
+      "person crop circle"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.crop.circle.fill",
+    "tags": [
+      "人物",
+      "human",
+      "person.crop.circle.fill",
+      "person crop circle fill"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.badge.plus",
+    "tags": [
+      "人物",
+      "human",
+      "person.badge.plus",
+      "person badge plus"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.badge.minus",
+    "tags": [
+      "人物",
+      "human",
+      "person.badge.minus",
+      "person badge minus"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.fill.checkmark",
+    "tags": [
+      "人物",
+      "human",
+      "person.fill.checkmark",
+      "person fill checkmark"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.stand",
+    "tags": [
+      "人物",
+      "human",
+      "figure.stand",
+      "figure stand"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.walk",
+    "tags": [
+      "人物",
+      "human",
+      "figure.walk",
+      "figure walk"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.run",
+    "tags": [
+      "人物",
+      "human",
+      "figure.run",
+      "figure run"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.cooldown",
+    "tags": [
+      "人物",
+      "human",
+      "figure.cooldown",
+      "figure cooldown"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.strengthtraining.traditional",
+    "tags": [
+      "人物",
+      "human",
+      "figure.strengthtraining.traditional",
+      "figure strengthtraining traditional"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.yoga",
+    "tags": [
+      "人物",
+      "human",
+      "figure.yoga",
+      "figure yoga"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "face.smiling",
+    "tags": [
+      "人物",
+      "human",
+      "face.smiling",
+      "face smiling"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "eyes",
+    "tags": [
+      "人物",
+      "human",
+      "eyes"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "ear",
+    "tags": [
+      "人物",
+      "human",
+      "ear"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "nose",
+    "tags": [
+      "人物",
+      "human",
+      "nose"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "mouth",
+    "tags": [
+      "人物",
+      "human",
+      "mouth"
+    ],
+    "category": "human",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "leaf",
+    "tags": [
+      "自然",
+      "nature",
+      "leaf"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "leaf.fill",
+    "tags": [
+      "自然",
+      "nature",
+      "leaf.fill",
+      "leaf fill"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "leaf.circle",
+    "tags": [
+      "自然",
+      "nature",
+      "leaf.circle",
+      "leaf circle"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "leaf.circle.fill",
+    "tags": [
+      "自然",
+      "nature",
+      "leaf.circle.fill",
+      "leaf circle fill"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "flame",
+    "tags": [
+      "自然",
+      "nature",
+      "flame"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "flame.fill",
+    "tags": [
+      "自然",
+      "nature",
+      "flame.fill",
+      "flame fill"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "drop",
+    "tags": [
+      "自然",
+      "nature",
+      "drop"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "drop.fill",
+    "tags": [
+      "自然",
+      "nature",
+      "drop.fill",
+      "drop fill"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "drop.circle",
+    "tags": [
+      "自然",
+      "nature",
+      "drop.circle",
+      "drop circle"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "drop.circle.fill",
+    "tags": [
+      "自然",
+      "nature",
+      "drop.circle.fill",
+      "drop circle fill"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hare",
+    "tags": [
+      "自然",
+      "nature",
+      "hare"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hare.fill",
+    "tags": [
+      "自然",
+      "nature",
+      "hare.fill",
+      "hare fill"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tortoise",
+    "tags": [
+      "自然",
+      "nature",
+      "tortoise"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tortoise.fill",
+    "tags": [
+      "自然",
+      "nature",
+      "tortoise.fill",
+      "tortoise fill"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pawprint",
+    "tags": [
+      "自然",
+      "nature",
+      "pawprint"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pawprint.fill",
+    "tags": [
+      "自然",
+      "nature",
+      "pawprint.fill",
+      "pawprint fill"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "fish",
+    "tags": [
+      "自然",
+      "nature",
+      "fish"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "fish.fill",
+    "tags": [
+      "自然",
+      "nature",
+      "fish.fill",
+      "fish fill"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bird",
+    "tags": [
+      "自然",
+      "nature",
+      "bird"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bird.fill",
+    "tags": [
+      "自然",
+      "nature",
+      "bird.fill",
+      "bird fill"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tree",
+    "tags": [
+      "自然",
+      "nature",
+      "tree"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "camera.macro",
+    "tags": [
+      "自然",
+      "nature",
+      "camera.macro",
+      "camera macro"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "ladybug",
+    "tags": [
+      "自然",
+      "nature",
+      "ladybug"
+    ],
+    "category": "nature",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "square.and.pencil",
+    "tags": [
+      "編集",
+      "editing",
+      "square.and.pencil",
+      "square and pencil"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pencil.and.outline",
+    "tags": [
+      "編集",
+      "editing",
+      "pencil.and.outline",
+      "pencil and outline"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pencil.tip",
+    "tags": [
+      "編集",
+      "editing",
+      "pencil.tip",
+      "pencil tip"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pencil.tip.crop.circle",
+    "tags": [
+      "編集",
+      "editing",
+      "pencil.tip.crop.circle",
+      "pencil tip crop circle"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "highlighter",
+    "tags": [
+      "編集",
+      "editing",
+      "highlighter"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "eraser",
+    "tags": [
+      "編集",
+      "editing",
+      "eraser"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "eraser.fill",
+    "tags": [
+      "編集",
+      "editing",
+      "eraser.fill",
+      "eraser fill"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "scissors.badge.ellipsis",
+    "tags": [
+      "編集",
+      "editing",
+      "scissors.badge.ellipsis",
+      "scissors badge ellipsis"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "signature",
+    "tags": [
+      "編集",
+      "editing",
+      "signature"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "scribble",
+    "tags": [
+      "編集",
+      "editing",
+      "scribble"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lasso",
+    "tags": [
+      "編集",
+      "editing",
+      "lasso"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "crop",
+    "tags": [
+      "編集",
+      "editing",
+      "crop"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "rotate.left",
+    "tags": [
+      "編集",
+      "editing",
+      "rotate.left",
+      "rotate left"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "rotate.right",
+    "tags": [
+      "編集",
+      "editing",
+      "rotate.right",
+      "rotate right"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.uturn.left",
+    "tags": [
+      "編集",
+      "editing",
+      "arrow.uturn.left",
+      "arrow uturn left"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.uturn.right",
+    "tags": [
+      "編集",
+      "editing",
+      "arrow.uturn.right",
+      "arrow uturn right"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "rectangle.and.pencil.and.ellipsis",
+    "tags": [
+      "編集",
+      "editing",
+      "rectangle.and.pencil.and.ellipsis",
+      "rectangle and pencil and ellipsis"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "selection.pin.in.out",
+    "tags": [
+      "編集",
+      "editing",
+      "selection.pin.in.out",
+      "selection pin in out"
+    ],
+    "category": "editing",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "textformat",
+    "tags": [
+      "文字",
+      "text",
+      "textformat"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "textformat.size",
+    "tags": [
+      "文字",
+      "text",
+      "textformat.size",
+      "textformat size"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "text.alignleft",
+    "tags": [
+      "文字",
+      "text",
+      "text.alignleft",
+      "text alignleft"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "text.aligncenter",
+    "tags": [
+      "文字",
+      "text",
+      "text.aligncenter",
+      "text aligncenter"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "text.alignright",
+    "tags": [
+      "文字",
+      "text",
+      "text.alignright",
+      "text alignright"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "text.justify",
+    "tags": [
+      "文字",
+      "text",
+      "text.justify",
+      "text justify"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "text.redaction",
+    "tags": [
+      "文字",
+      "text",
+      "text.redaction",
+      "text redaction"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "text.badge.plus",
+    "tags": [
+      "文字",
+      "text",
+      "text.badge.plus",
+      "text badge plus"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "text.badge.minus",
+    "tags": [
+      "文字",
+      "text",
+      "text.badge.minus",
+      "text badge minus"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "text.quote",
+    "tags": [
+      "文字",
+      "text",
+      "text.quote",
+      "text quote"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "list.bullet",
+    "tags": [
+      "文字",
+      "text",
+      "list.bullet",
+      "list bullet"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "list.bullet.indent",
+    "tags": [
+      "文字",
+      "text",
+      "list.bullet.indent",
+      "list bullet indent"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "list.number",
+    "tags": [
+      "文字",
+      "text",
+      "list.number",
+      "list number"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "list.dash",
+    "tags": [
+      "文字",
+      "text",
+      "list.dash",
+      "list dash"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "list.star",
+    "tags": [
+      "文字",
+      "text",
+      "list.star",
+      "list star"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "paragraphsign",
+    "tags": [
+      "文字",
+      "text",
+      "paragraphsign"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bold",
+    "tags": [
+      "文字",
+      "text",
+      "bold"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "italic",
+    "tags": [
+      "文字",
+      "text",
+      "italic"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "underline",
+    "tags": [
+      "文字",
+      "text",
+      "underline"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "strikethrough",
+    "tags": [
+      "文字",
+      "text",
+      "strikethrough"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "a.circle",
+    "tags": [
+      "文字",
+      "text",
+      "a.circle",
+      "a circle"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "a.circle.fill",
+    "tags": [
+      "文字",
+      "text",
+      "a.circle.fill",
+      "a circle fill"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "quote.opening",
+    "tags": [
+      "文字",
+      "text",
+      "quote.opening",
+      "quote opening"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "quote.closing",
+    "tags": [
+      "文字",
+      "text",
+      "quote.closing",
+      "quote closing"
+    ],
+    "category": "text-formatting",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "play",
+    "tags": [
+      "メディア",
+      "media",
+      "play"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "play.fill",
+    "tags": [
+      "メディア",
+      "media",
+      "play.fill",
+      "play fill"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pause",
+    "tags": [
+      "メディア",
+      "media",
+      "pause"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pause.fill",
+    "tags": [
+      "メディア",
+      "media",
+      "pause.fill",
+      "pause fill"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "stop",
+    "tags": [
+      "メディア",
+      "media",
+      "stop"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "stop.fill",
+    "tags": [
+      "メディア",
+      "media",
+      "stop.fill",
+      "stop fill"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "record.circle",
+    "tags": [
+      "メディア",
+      "media",
+      "record.circle",
+      "record circle"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "record.circle.fill",
+    "tags": [
+      "メディア",
+      "media",
+      "record.circle.fill",
+      "record circle fill"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "backward",
+    "tags": [
+      "メディア",
+      "media",
+      "backward"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "backward.fill",
+    "tags": [
+      "メディア",
+      "media",
+      "backward.fill",
+      "backward fill"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "forward",
+    "tags": [
+      "メディア",
+      "media",
+      "forward"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "forward.fill",
+    "tags": [
+      "メディア",
+      "media",
+      "forward.fill",
+      "forward fill"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "backward.end",
+    "tags": [
+      "メディア",
+      "media",
+      "backward.end",
+      "backward end"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "backward.end.fill",
+    "tags": [
+      "メディア",
+      "media",
+      "backward.end.fill",
+      "backward end fill"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "forward.end",
+    "tags": [
+      "メディア",
+      "media",
+      "forward.end",
+      "forward end"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "forward.end.fill",
+    "tags": [
+      "メディア",
+      "media",
+      "forward.end.fill",
+      "forward end fill"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "shuffle",
+    "tags": [
+      "メディア",
+      "media",
+      "shuffle"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "repeat",
+    "tags": [
+      "メディア",
+      "media",
+      "repeat"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "repeat.1",
+    "tags": [
+      "メディア",
+      "media",
+      "repeat.1",
+      "repeat 1"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "speaker",
+    "tags": [
+      "メディア",
+      "media",
+      "speaker"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "speaker.fill",
+    "tags": [
+      "メディア",
+      "media",
+      "speaker.fill",
+      "speaker fill"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "speaker.slash",
+    "tags": [
+      "メディア",
+      "media",
+      "speaker.slash",
+      "speaker slash"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "speaker.slash.fill",
+    "tags": [
+      "メディア",
+      "media",
+      "speaker.slash.fill",
+      "speaker slash fill"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "speaker.wave.1",
+    "tags": [
+      "メディア",
+      "media",
+      "speaker.wave.1",
+      "speaker wave 1"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "speaker.wave.2",
+    "tags": [
+      "メディア",
+      "media",
+      "speaker.wave.2",
+      "speaker wave 2"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "speaker.wave.3",
+    "tags": [
+      "メディア",
+      "media",
+      "speaker.wave.3",
+      "speaker wave 3"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "music.note",
+    "tags": [
+      "メディア",
+      "media",
+      "music.note",
+      "music note"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "music.note.list",
+    "tags": [
+      "メディア",
+      "media",
+      "music.note.list",
+      "music note list"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "music.mic",
+    "tags": [
+      "メディア",
+      "media",
+      "music.mic",
+      "music mic"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "radio",
+    "tags": [
+      "メディア",
+      "media",
+      "radio"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tv.music.note",
+    "tags": [
+      "メディア",
+      "media",
+      "tv.music.note",
+      "tv music note"
+    ],
+    "category": "media",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "command",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "command"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "option",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "option"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "control",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "control"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "shift",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "shift"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "capslock",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "capslock"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "eject",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "eject"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "delete.left",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "delete.left",
+      "delete left"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "delete.left.fill",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "delete.left.fill",
+      "delete left fill"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "delete.right",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "delete.right",
+      "delete right"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "delete.right.fill",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "delete.right.fill",
+      "delete right fill"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "return",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "return"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "return.left",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "return.left",
+      "return left"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "space",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "space"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "escape",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "escape"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "globe",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "globe"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "keyboard.chevron.compact.down",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "keyboard.chevron.compact.down",
+      "keyboard chevron compact down"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "keyboard.badge.ellipsis",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "keyboard.badge.ellipsis",
+      "keyboard badge ellipsis"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "fn",
+    "tags": [
+      "キーボード",
+      "keyboard",
+      "fn"
+    ],
+    "category": "keyboard",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cart.badge.plus",
+    "tags": [
+      "買い物",
+      "commerce",
+      "cart.badge.plus",
+      "cart badge plus"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cart.badge.minus",
+    "tags": [
+      "買い物",
+      "commerce",
+      "cart.badge.minus",
+      "cart badge minus"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bag.badge.plus",
+    "tags": [
+      "買い物",
+      "commerce",
+      "bag.badge.plus",
+      "bag badge plus"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bag.badge.minus",
+    "tags": [
+      "買い物",
+      "commerce",
+      "bag.badge.minus",
+      "bag badge minus"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "creditcard.and.123",
+    "tags": [
+      "買い物",
+      "commerce",
+      "creditcard.and.123",
+      "creditcard and 123"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "wallet.pass",
+    "tags": [
+      "買い物",
+      "commerce",
+      "wallet.pass",
+      "wallet pass"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "ticket",
+    "tags": [
+      "買い物",
+      "commerce",
+      "ticket"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "ticket.fill",
+    "tags": [
+      "買い物",
+      "commerce",
+      "ticket.fill",
+      "ticket fill"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "banknote",
+    "tags": [
+      "買い物",
+      "commerce",
+      "banknote"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "creditcard.trianglebadge.exclamationmark",
+    "tags": [
+      "買い物",
+      "commerce",
+      "creditcard.trianglebadge.exclamationmark",
+      "creditcard trianglebadge exclamationmark"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "barcode",
+    "tags": [
+      "買い物",
+      "commerce",
+      "barcode"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "barcode.viewfinder",
+    "tags": [
+      "買い物",
+      "commerce",
+      "barcode.viewfinder",
+      "barcode viewfinder"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "qrcode",
+    "tags": [
+      "買い物",
+      "commerce",
+      "qrcode"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "qrcode.viewfinder",
+    "tags": [
+      "買い物",
+      "commerce",
+      "qrcode.viewfinder",
+      "qrcode viewfinder"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tag.circle",
+    "tags": [
+      "買い物",
+      "commerce",
+      "tag.circle",
+      "tag circle"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tag.circle.fill",
+    "tags": [
+      "買い物",
+      "commerce",
+      "tag.circle.fill",
+      "tag circle fill"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "gift.card",
+    "tags": [
+      "買い物",
+      "commerce",
+      "gift.card",
+      "gift card"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "giftcard",
+    "tags": [
+      "買い物",
+      "commerce",
+      "giftcard"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "dollarsign.circle",
+    "tags": [
+      "買い物",
+      "commerce",
+      "dollarsign.circle",
+      "dollarsign circle"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "dollarsign.circle.fill",
+    "tags": [
+      "買い物",
+      "commerce",
+      "dollarsign.circle.fill",
+      "dollarsign circle fill"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "yensign.circle",
+    "tags": [
+      "買い物",
+      "commerce",
+      "yensign.circle",
+      "yensign circle"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "eurosign.circle",
+    "tags": [
+      "買い物",
+      "commerce",
+      "eurosign.circle",
+      "eurosign circle"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sterlingsign.circle",
+    "tags": [
+      "買い物",
+      "commerce",
+      "sterlingsign.circle",
+      "sterlingsign circle"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bitcoinsign.circle",
+    "tags": [
+      "買い物",
+      "commerce",
+      "bitcoinsign.circle",
+      "bitcoinsign circle"
+    ],
+    "category": "commerce",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "clock",
+    "tags": [
+      "時間",
+      "time",
+      "clock"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "clock.fill",
+    "tags": [
+      "時間",
+      "time",
+      "clock.fill",
+      "clock fill"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "calendar",
+    "tags": [
+      "時間",
+      "time",
+      "calendar"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "calendar.circle",
+    "tags": [
+      "時間",
+      "time",
+      "calendar.circle",
+      "calendar circle"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "calendar.circle.fill",
+    "tags": [
+      "時間",
+      "time",
+      "calendar.circle.fill",
+      "calendar circle fill"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "calendar.badge.plus",
+    "tags": [
+      "時間",
+      "time",
+      "calendar.badge.plus",
+      "calendar badge plus"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "calendar.badge.minus",
+    "tags": [
+      "時間",
+      "time",
+      "calendar.badge.minus",
+      "calendar badge minus"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "timer",
+    "tags": [
+      "時間",
+      "time",
+      "timer"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "timer.square",
+    "tags": [
+      "時間",
+      "time",
+      "timer.square",
+      "timer square"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "stopwatch",
+    "tags": [
+      "時間",
+      "time",
+      "stopwatch"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "stopwatch.fill",
+    "tags": [
+      "時間",
+      "time",
+      "stopwatch.fill",
+      "stopwatch fill"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "alarm",
+    "tags": [
+      "時間",
+      "time",
+      "alarm"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "alarm.fill",
+    "tags": [
+      "時間",
+      "time",
+      "alarm.fill",
+      "alarm fill"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hourglass",
+    "tags": [
+      "時間",
+      "time",
+      "hourglass"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hourglass.bottomhalf.fill",
+    "tags": [
+      "時間",
+      "time",
+      "hourglass.bottomhalf.fill",
+      "hourglass bottomhalf fill"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hourglass.tophalf.fill",
+    "tags": [
+      "時間",
+      "time",
+      "hourglass.tophalf.fill",
+      "hourglass tophalf fill"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "clock.arrow.2.circlepath",
+    "tags": [
+      "時間",
+      "time",
+      "clock.arrow.2.circlepath",
+      "clock arrow 2 circlepath"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "clock.badge.checkmark",
+    "tags": [
+      "時間",
+      "time",
+      "clock.badge.checkmark",
+      "clock badge checkmark"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "clock.badge.exclamationmark",
+    "tags": [
+      "時間",
+      "time",
+      "clock.badge.exclamationmark",
+      "clock badge exclamationmark"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "clock.badge.questionmark",
+    "tags": [
+      "時間",
+      "time",
+      "clock.badge.questionmark",
+      "clock badge questionmark"
+    ],
+    "category": "time",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "heart",
+    "tags": [
+      "健康",
+      "health",
+      "heart",
+      "お気に入り",
+      "favorite"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "heart.fill",
+    "tags": [
+      "健康",
+      "health",
+      "heart.fill",
+      "heart fill",
+      "お気に入り",
+      "favorite"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "heart.circle",
+    "tags": [
+      "健康",
+      "health",
+      "heart.circle",
+      "heart circle",
+      "お気に入り",
+      "favorite"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "heart.circle.fill",
+    "tags": [
+      "健康",
+      "health",
+      "heart.circle.fill",
+      "heart circle fill",
+      "お気に入り",
+      "favorite"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cross",
+    "tags": [
+      "健康",
+      "health",
+      "cross"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cross.fill",
+    "tags": [
+      "健康",
+      "health",
+      "cross.fill",
+      "cross fill"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cross.case",
+    "tags": [
+      "健康",
+      "health",
+      "cross.case",
+      "cross case"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cross.case.fill",
+    "tags": [
+      "健康",
+      "health",
+      "cross.case.fill",
+      "cross case fill"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "stethoscope",
+    "tags": [
+      "健康",
+      "health",
+      "stethoscope"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pills",
+    "tags": [
+      "健康",
+      "health",
+      "pills"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "pills.fill",
+    "tags": [
+      "健康",
+      "health",
+      "pills.fill",
+      "pills fill"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "capsule",
+    "tags": [
+      "健康",
+      "health",
+      "capsule"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "capsule.fill",
+    "tags": [
+      "健康",
+      "health",
+      "capsule.fill",
+      "capsule fill"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bandage",
+    "tags": [
+      "健康",
+      "health",
+      "bandage"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bandage.fill",
+    "tags": [
+      "健康",
+      "health",
+      "bandage.fill",
+      "bandage fill"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lungs",
+    "tags": [
+      "健康",
+      "health",
+      "lungs"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lungs.fill",
+    "tags": [
+      "健康",
+      "health",
+      "lungs.fill",
+      "lungs fill"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "brain.head.profile",
+    "tags": [
+      "健康",
+      "health",
+      "brain.head.profile",
+      "brain head profile"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bed.double",
+    "tags": [
+      "健康",
+      "health",
+      "bed.double",
+      "bed double"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bed.double.fill",
+    "tags": [
+      "健康",
+      "health",
+      "bed.double.fill",
+      "bed double fill"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "waveform.path.ecg",
+    "tags": [
+      "健康",
+      "health",
+      "waveform.path.ecg",
+      "waveform path ecg"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "waveform.path.ecg.rectangle",
+    "tags": [
+      "健康",
+      "health",
+      "waveform.path.ecg.rectangle",
+      "waveform path ecg rectangle"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "allergens",
+    "tags": [
+      "健康",
+      "health",
+      "allergens"
+    ],
+    "category": "health",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "circle",
+    "tags": [
+      "形",
+      "shapes",
+      "circle"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "circle.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "circle.fill",
+      "circle fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "square",
+    "tags": [
+      "形",
+      "shapes",
+      "square"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "square.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "square.fill",
+      "square fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "triangle",
+    "tags": [
+      "形",
+      "shapes",
+      "triangle"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "triangle.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "triangle.fill",
+      "triangle fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "diamond",
+    "tags": [
+      "形",
+      "shapes",
+      "diamond"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "diamond.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "diamond.fill",
+      "diamond fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hexagon",
+    "tags": [
+      "形",
+      "shapes",
+      "hexagon"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hexagon.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "hexagon.fill",
+      "hexagon fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "octagon",
+    "tags": [
+      "形",
+      "shapes",
+      "octagon"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "octagon.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "octagon.fill",
+      "octagon fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "seal",
+    "tags": [
+      "形",
+      "shapes",
+      "seal"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "seal.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "seal.fill",
+      "seal fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "rhombus",
+    "tags": [
+      "形",
+      "shapes",
+      "rhombus"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "rhombus.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "rhombus.fill",
+      "rhombus fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "capsule.portrait",
+    "tags": [
+      "形",
+      "shapes",
+      "capsule.portrait",
+      "capsule portrait"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "capsule.portrait.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "capsule.portrait.fill",
+      "capsule portrait fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "app",
+    "tags": [
+      "形",
+      "shapes",
+      "app"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "app.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "app.fill",
+      "app fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "rectangle",
+    "tags": [
+      "形",
+      "shapes",
+      "rectangle"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "rectangle.fill",
+    "tags": [
+      "形",
+      "shapes",
+      "rectangle.fill",
+      "rectangle fill"
+    ],
+    "category": "shapes",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.up",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.up",
+      "arrow up"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.down",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.down",
+      "arrow down"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.left",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.left",
+      "arrow left"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.right",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.right",
+      "arrow right"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.up.left",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.up.left",
+      "arrow up left"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.up.right",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.up.right",
+      "arrow up right"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.down.left",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.down.left",
+      "arrow down left"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.down.right",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.down.right",
+      "arrow down right"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.left.and.right",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.left.and.right",
+      "arrow left and right"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.up.and.down",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.up.and.down",
+      "arrow up and down"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.clockwise",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.clockwise",
+      "arrow clockwise"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.counterclockwise",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.counterclockwise",
+      "arrow counterclockwise"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrow.triangle.2.circlepath",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrow.triangle.2.circlepath",
+      "arrow triangle 2 circlepath"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrowshape.turn.up.left",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrowshape.turn.up.left",
+      "arrowshape turn up left"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrowshape.turn.up.right",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrowshape.turn.up.right",
+      "arrowshape turn up right"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrowshape.turn.up.backward",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrowshape.turn.up.backward",
+      "arrowshape turn up backward"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "arrowshape.turn.up.forward",
+    "tags": [
+      "矢印",
+      "arrows",
+      "arrowshape.turn.up.forward",
+      "arrowshape turn up forward"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "chevron.left",
+    "tags": [
+      "矢印",
+      "arrows",
+      "chevron.left",
+      "chevron left"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "chevron.right",
+    "tags": [
+      "矢印",
+      "arrows",
+      "chevron.right",
+      "chevron right"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "chevron.up",
+    "tags": [
+      "矢印",
+      "arrows",
+      "chevron.up",
+      "chevron up"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "chevron.down",
+    "tags": [
+      "矢印",
+      "arrows",
+      "chevron.down",
+      "chevron down"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "chevron.left.2",
+    "tags": [
+      "矢印",
+      "arrows",
+      "chevron.left.2",
+      "chevron left 2"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "chevron.right.2",
+    "tags": [
+      "矢印",
+      "arrows",
+      "chevron.right.2",
+      "chevron right 2"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "chevron.up.chevron.down",
+    "tags": [
+      "矢印",
+      "arrows",
+      "chevron.up.chevron.down",
+      "chevron up chevron down"
+    ],
+    "category": "arrows",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "0.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "0.circle",
+      "0 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "0.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "0.circle.fill",
+      "0 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "1.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "1.circle",
+      "1 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "1.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "1.circle.fill",
+      "1 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "2.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "2.circle",
+      "2 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "2.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "2.circle.fill",
+      "2 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "3.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "3.circle",
+      "3 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "3.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "3.circle.fill",
+      "3 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "4.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "4.circle",
+      "4 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "4.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "4.circle.fill",
+      "4 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "5.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "5.circle",
+      "5 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "5.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "5.circle.fill",
+      "5 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "6.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "6.circle",
+      "6 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "6.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "6.circle.fill",
+      "6 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "7.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "7.circle",
+      "7 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "7.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "7.circle.fill",
+      "7 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "8.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "8.circle",
+      "8 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "8.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "8.circle.fill",
+      "8 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "9.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "9.circle",
+      "9 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "9.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "9.circle.fill",
+      "9 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "10.circle",
+    "tags": [
+      "番号",
+      "indices",
+      "10.circle",
+      "10 circle"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "10.circle.fill",
+    "tags": [
+      "番号",
+      "indices",
+      "10.circle.fill",
+      "10 circle fill"
+    ],
+    "category": "indices",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "plus",
+    "tags": [
+      "計算",
+      "math",
+      "plus"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "plus.circle",
+    "tags": [
+      "計算",
+      "math",
+      "plus.circle",
+      "plus circle"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "plus.circle.fill",
+    "tags": [
+      "計算",
+      "math",
+      "plus.circle.fill",
+      "plus circle fill"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "minus",
+    "tags": [
+      "計算",
+      "math",
+      "minus"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "minus.circle",
+    "tags": [
+      "計算",
+      "math",
+      "minus.circle",
+      "minus circle"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "minus.circle.fill",
+    "tags": [
+      "計算",
+      "math",
+      "minus.circle.fill",
+      "minus circle fill"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "multiply",
+    "tags": [
+      "計算",
+      "math",
+      "multiply"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "multiply.circle",
+    "tags": [
+      "計算",
+      "math",
+      "multiply.circle",
+      "multiply circle"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "multiply.circle.fill",
+    "tags": [
+      "計算",
+      "math",
+      "multiply.circle.fill",
+      "multiply circle fill"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "divide",
+    "tags": [
+      "計算",
+      "math",
+      "divide"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "divide.circle",
+    "tags": [
+      "計算",
+      "math",
+      "divide.circle",
+      "divide circle"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "divide.circle.fill",
+    "tags": [
+      "計算",
+      "math",
+      "divide.circle.fill",
+      "divide circle fill"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "equal",
+    "tags": [
+      "計算",
+      "math",
+      "equal"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "xmark",
+    "tags": [
+      "計算",
+      "math",
+      "xmark"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "xmark.circle",
+    "tags": [
+      "計算",
+      "math",
+      "xmark.circle",
+      "xmark circle"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "xmark.circle.fill",
+    "tags": [
+      "計算",
+      "math",
+      "xmark.circle.fill",
+      "xmark circle fill"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "checkmark",
+    "tags": [
+      "計算",
+      "math",
+      "checkmark"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "checkmark.circle",
+    "tags": [
+      "計算",
+      "math",
+      "checkmark.circle",
+      "checkmark circle"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "checkmark.circle.fill",
+    "tags": [
+      "計算",
+      "math",
+      "checkmark.circle.fill",
+      "checkmark circle fill"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "percent",
+    "tags": [
+      "計算",
+      "math",
+      "percent"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "function",
+    "tags": [
+      "計算",
+      "math",
+      "function"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sum",
+    "tags": [
+      "計算",
+      "math",
+      "sum"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "infinity",
+    "tags": [
+      "計算",
+      "math",
+      "infinity"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lessthan",
+    "tags": [
+      "計算",
+      "math",
+      "lessthan"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "greaterthan",
+    "tags": [
+      "計算",
+      "math",
+      "greaterthan"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "plusminus",
+    "tags": [
+      "計算",
+      "math",
+      "plusminus"
+    ],
+    "category": "math",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "gamecontroller",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "gamecontroller"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "gamecontroller.fill",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "gamecontroller.fill",
+      "gamecontroller fill"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "dice",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "dice"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "dice.fill",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "dice.fill",
+      "dice fill"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "flag.checkered",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "flag.checkered",
+      "flag checkered"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "puzzlepiece",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "puzzlepiece"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "puzzlepiece.fill",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "puzzlepiece.fill",
+      "puzzlepiece fill"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "trophy",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "trophy"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "trophy.fill",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "trophy.fill",
+      "trophy fill"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "soccerball",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "soccerball"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "basketball",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "basketball"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "baseball",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "baseball"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "tennisball",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "tennisball"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "volleyball",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "volleyball"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "cricket.ball",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "cricket.ball",
+      "cricket ball"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "medal",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "medal"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "flag.2.crossed",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "flag.2.crossed",
+      "flag 2 crossed"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "target",
+    "tags": [
+      "ゲーム",
+      "gaming",
+      "target"
+    ],
+    "category": "gaming",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "map",
+    "tags": [
+      "地図",
+      "maps",
+      "map"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "map.fill",
+    "tags": [
+      "地図",
+      "maps",
+      "map.fill",
+      "map fill"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "mappin",
+    "tags": [
+      "地図",
+      "maps",
+      "mappin"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "mappin.and.ellipse",
+    "tags": [
+      "地図",
+      "maps",
+      "mappin.and.ellipse",
+      "mappin and ellipse"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "mappin.circle",
+    "tags": [
+      "地図",
+      "maps",
+      "mappin.circle",
+      "mappin circle"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "mappin.circle.fill",
+    "tags": [
+      "地図",
+      "maps",
+      "mappin.circle.fill",
+      "mappin circle fill"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "location",
+    "tags": [
+      "地図",
+      "maps",
+      "location"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "location.fill",
+    "tags": [
+      "地図",
+      "maps",
+      "location.fill",
+      "location fill"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "location.north",
+    "tags": [
+      "地図",
+      "maps",
+      "location.north",
+      "location north"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "location.north.fill",
+    "tags": [
+      "地図",
+      "maps",
+      "location.north.fill",
+      "location north fill"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "safari",
+    "tags": [
+      "地図",
+      "maps",
+      "safari"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "safari.fill",
+    "tags": [
+      "地図",
+      "maps",
+      "safari.fill",
+      "safari fill"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "parkingsign",
+    "tags": [
+      "地図",
+      "maps",
+      "parkingsign"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "parkingsign.circle",
+    "tags": [
+      "地図",
+      "maps",
+      "parkingsign.circle",
+      "parkingsign circle"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "fuelpump.circle",
+    "tags": [
+      "地図",
+      "maps",
+      "fuelpump.circle",
+      "fuelpump circle"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "signpost.left",
+    "tags": [
+      "地図",
+      "maps",
+      "signpost.left",
+      "signpost left"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "signpost.left.fill",
+    "tags": [
+      "地図",
+      "maps",
+      "signpost.left.fill",
+      "signpost left fill"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "signpost.right",
+    "tags": [
+      "地図",
+      "maps",
+      "signpost.right",
+      "signpost right"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "signpost.right.fill",
+    "tags": [
+      "地図",
+      "maps",
+      "signpost.right.fill",
+      "signpost right fill"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.hiking",
+    "tags": [
+      "地図",
+      "maps",
+      "figure.hiking",
+      "figure hiking"
+    ],
+    "category": "maps",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lightbulb",
+    "tags": [
+      "ホーム",
+      "home",
+      "lightbulb"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lightbulb.fill",
+    "tags": [
+      "ホーム",
+      "home",
+      "lightbulb.fill",
+      "lightbulb fill"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "fanblades",
+    "tags": [
+      "ホーム",
+      "home",
+      "fanblades"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "fanblades.fill",
+    "tags": [
+      "ホーム",
+      "home",
+      "fanblades.fill",
+      "fanblades fill"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lamp.table",
+    "tags": [
+      "ホーム",
+      "home",
+      "lamp.table",
+      "lamp table"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lamp.table.fill",
+    "tags": [
+      "ホーム",
+      "home",
+      "lamp.table.fill",
+      "lamp table fill"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lamp.floor",
+    "tags": [
+      "ホーム",
+      "home",
+      "lamp.floor",
+      "lamp floor"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "lamp.floor.fill",
+    "tags": [
+      "ホーム",
+      "home",
+      "lamp.floor.fill",
+      "lamp floor fill"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sofa",
+    "tags": [
+      "ホーム",
+      "home",
+      "sofa"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sofa.fill",
+    "tags": [
+      "ホーム",
+      "home",
+      "sofa.fill",
+      "sofa fill"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bed.double.circle",
+    "tags": [
+      "ホーム",
+      "home",
+      "bed.double.circle",
+      "bed double circle"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "washer",
+    "tags": [
+      "ホーム",
+      "home",
+      "washer"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "dryer",
+    "tags": [
+      "ホーム",
+      "home",
+      "dryer"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "dishwasher",
+    "tags": [
+      "ホーム",
+      "home",
+      "dishwasher"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "refrigerator",
+    "tags": [
+      "ホーム",
+      "home",
+      "refrigerator"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "stove",
+    "tags": [
+      "ホーム",
+      "home",
+      "stove"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "door.left.hand.open",
+    "tags": [
+      "ホーム",
+      "home",
+      "door.left.hand.open",
+      "door left hand open"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "door.right.hand.open",
+    "tags": [
+      "ホーム",
+      "home",
+      "door.right.hand.open",
+      "door right hand open"
+    ],
+    "category": "home",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.walk.circle",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.walk.circle",
+      "figure walk circle"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.walk.circle.fill",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.walk.circle.fill",
+      "figure walk circle fill"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.run.circle",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.run.circle",
+      "figure run circle"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.run.circle.fill",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.run.circle.fill",
+      "figure run circle fill"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.open.water.swim",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.open.water.swim",
+      "figure open water swim"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.outdoor.cycle",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.outdoor.cycle",
+      "figure outdoor cycle"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.indoor.cycle",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.indoor.cycle",
+      "figure indoor cycle"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.climbing",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.climbing",
+      "figure climbing"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "dumbbell",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "dumbbell"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "sportscourt",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "sportscourt"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.core.training",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.core.training",
+      "figure core training"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.cross.training",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.cross.training",
+      "figure cross training"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.mind.and.body",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.mind.and.body",
+      "figure mind and body"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.track.and.field",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "figure.track.and.field",
+      "figure track and field"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "heart.text.square",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "heart.text.square",
+      "heart text square",
+      "お気に入り",
+      "favorite"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "bolt.heart",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "bolt.heart",
+      "bolt heart"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "waveform",
+    "tags": [
+      "フィットネス",
+      "fitness",
+      "waveform"
+    ],
+    "category": "fitness",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "accessibility",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "accessibility.fill",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "accessibility.fill",
+      "accessibility fill"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.roll",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "figure.roll",
+      "figure roll"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "figure.seated.side",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "figure.seated.side",
+      "figure seated side"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hearingdevice.ear",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "hearingdevice.ear",
+      "hearingdevice ear"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "ear.badge.waveform",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "ear.badge.waveform",
+      "ear badge waveform"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "eye",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "eye"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "eye.fill",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "eye.fill",
+      "eye fill"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "eye.slash",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "eye.slash",
+      "eye slash"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "eye.slash.fill",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "eye.slash.fill",
+      "eye slash fill"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hand.raised",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "hand.raised",
+      "hand raised"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hand.raised.fill",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "hand.raised.fill",
+      "hand raised fill"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "hand.raised.slash",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "hand.raised.slash",
+      "hand raised slash"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "wheelchair",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "wheelchair"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "person.crop.circle.badge.exclamationmark",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "person.crop.circle.badge.exclamationmark",
+      "person crop circle badge exclamationmark"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "captions.bubble",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "captions.bubble",
+      "captions bubble"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "captions.bubble.fill",
+    "tags": [
+      "アクセシビリティ",
+      "accessibility",
+      "captions.bubble.fill",
+      "captions bubble fill"
+    ],
+    "category": "accessibility",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "magnifyingglass",
+    "tags": [
+      "アイコン",
+      "icon",
+      "検索",
+      "search",
+      "magnifying glass"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "star",
+    "tags": [
+      "アイコン",
+      "icon",
+      "スター",
+      "star",
+      "favorite"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  },
+  {
+    "name": "star.fill",
+    "tags": [
+      "アイコン",
+      "icon",
+      "スター",
+      "star",
+      "favorite"
+    ],
+    "category": "objects",
+    "ios_min_version": "13.0"
+  }
+]
