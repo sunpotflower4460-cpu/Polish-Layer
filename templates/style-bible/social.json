@@ -1,0 +1,62 @@
+{
+  "version": "v1",
+  "platform": "ios",
+  "references": [],
+  "category": "social",
+  "design_system": {
+    "color": {
+      "mode": "auto",
+      "light": {
+        "primary": "#FF2D55",
+        "bg": "#FFFFFF",
+        "label": "#000000",
+        "secondary_label": "#3C3C43",
+        "separator": "#C6C6C8"
+      },
+      "dark": {
+        "primary": "#FF375F",
+        "bg": "#000000",
+        "label": "#FFFFFF",
+        "secondary_label": "#EBEBF5",
+        "separator": "#38383A"
+      },
+      "semantic": "iOS system colors準拠。primary はソーシャルアクション（いいね・シェア）"
+    },
+    "typography": {
+      "family": "SF Pro",
+      "scale": "iOS Dynamic Type",
+      "weights": [400, 500, 600, 700]
+    },
+    "spacing": {
+      "base": 4,
+      "scale": [4, 8, 12, 16, 24, 32, 48]
+    },
+    "corner_radius": {
+      "card": 16,
+      "button": 22,
+      "sheet": 20
+    },
+    "elevation": "subtle"
+  },
+  "motion": {
+    "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+    "duration": { "micro": 120, "standard": 200, "emphasized": 350 },
+    "spring": { "stiffness": 400, "damping": 28 }
+  },
+  "sound": {
+    "enabled": true,
+    "ui_se_set": "rich",
+    "loudness_target_lufs": -16
+  },
+  "copy": {
+    "tone": "playful",
+    "person": "second",
+    "locale": ["ja", "en"]
+  },
+  "qc_thresholds": {
+    "wcag": "AA",
+    "min_tap_target_pt": 44,
+    "max_bundle_mb": 50,
+    "min_fps": 60
+  }
+}

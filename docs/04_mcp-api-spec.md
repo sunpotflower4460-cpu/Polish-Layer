@@ -1,0 +1,197 @@
+# 04. MCP API 仕様
+
+## 概要
+
+Polish Layer は MCP（Model Context Protocol）サーバーとして **6 つのメソッド**を公開する。REST フォールバックも同等のエンドポイントを提供。
+
+## メソッド一覧
+
+| メソッド | 用途 |
+|---|---|
+| `polish.init_project` | Style Bible を生成・固定 |
+| `polish.get_screen` | 画面のコード片＋アセット一式を取得 |
+| `polish.get_icon` | アイコンを意味語で取得 |
+| `polish.get_animation` | アニメーションを意図で取得 |
+| `polish.get_sound` | UI SE / BGM を取得 |
+| `polish.qc_check` | 生成物の品質検査 |
+
+---
+
+## 詳細
+
+### polish.init_project
+
+**入力**
+```json
+{
+  "references": ["Linear", "Things 3"],
+  "category": "productivity",
+  "platform": "ios"
+}
+```
+
+**出力**
+```json
+{
+  "project_id": "uuid",
+  "style_bible": { /* Style Bible オブジェクト */ }
+}
+```
+
+---
+
+### polish.get_screen
+
+**入力**
+```json
+{
+  "project_id": "uuid",
+  "intent": "ログイン画面、メール+パスワード、SNS連携あり",
+  "framework": "swiftui | react-native"
+}
+```
+
+**出力**
+```json
+{
+  "code": "/* SwiftUI コード片 */",
+  "assets": [
+    { "type": "icon", "name": "envelope", "source": "sf-symbols" },
+    { "type": "lottie", "url": "https://...", "license": "free-commercial" }
+  ],
+  "qc_passed": true,
+  "warnings": []
+}
+```
+
+---
+
+### polish.get_icon
+
+**入力**
+```json
+{
+  "project_id": "uuid",
+  "semantic": "設定",
+  "preferred_source": "sf-symbols"
+}
+```
+
+**出力**
+```json
+{
+  "candidates": [
+    { "name": "gearshape", "source": "sf-symbols", "preview_url": "...", "license": "apple-system" },
+    { "name": "settings", "source": "iconify", "preview_url": "...", "license": "MIT" }
+  ]
+}
+```
+
+---
+
+### polish.get_animation
+
+**入力**
+```json
+{
+  "project_id": "uuid",
+  "intent": "成功時のチェックマーク、控えめ",
+  "max_results": 3
+}
+```
+
+**出力**
+```json
+{
+  "candidates": [
+    {
+      "url": "https://lottiefiles.com/...",
+      "preview_url": "...",
+      "duration_ms": 1200,
+      "license": "free-commercial"
+    }
+  ]
+}
+```
+
+---
+
+### polish.get_sound
+
+**入力**
+```json
+{
+  "project_id": "uuid",
+  "event": "tap | success | error | notification",
+  "duration_max_ms": 500
+}
+```
+
+**出力**
+```json
+{
+  "candidates": [
+    {
+      "url": "https://...",
+      "format": "aac",
+      "loudness_lufs": -16,
+      "license": "CC0"
+    }
+  ]
+}
+```
+
+---
+
+### polish.qc_check
+
+**入力**
+```json
+{
+  "project_id": "uuid",
+  "artifact_type": "swiftui_code | image | audio",
+  "content": "..."
+}
+```
+
+**出力**
+```json
+{
+  "passed": false,
+  "violations": [
+    {
+      "rule": "contrast_ratio",
+      "severity": "error",
+      "message": "primary on bg の比率が 3.2:1 (要 4.5:1)",
+      "suggestion": "primary を #0066CC に変更"
+    }
+  ]
+}
+```
+
+---
+
+## エラーハンドリング
+
+すべてのメソッドは以下のエラー形式を返す。
+
+```json
+{
+  "error": {
+    "code": "string",
+    "message": "string",
+    "details": {}
+  }
+}
+```
+
+**エラーコード：**
+- `INVALID_INPUT`：入力スキーマ違反
+- `PROJECT_NOT_FOUND`：project_id が存在しない
+- `UPSTREAM_ERROR`：外部API障害
+- `LICENSE_RESTRICTED`：商用利用不可アセットのみヒット
+- `RATE_LIMITED`：レート制限
+
+## レート制限
+
+MVPでは `project_id` ごとに **60 req/min**。
