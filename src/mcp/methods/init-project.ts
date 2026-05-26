@@ -24,13 +24,14 @@ export async function initProject(rawInput: unknown): Promise<Output> {
   const templatePath = resolve(currentDir, '../../../templates/style-bible', `${input.category}.json`);
   const templateText = await readFile(templatePath, 'utf-8');
   const template = StyleBibleTemplateSchema.parse(JSON.parse(templateText));
+  const projectId = randomUUID();
 
   const styleBible = StyleBibleSchema.parse({
     ...template,
     category: input.category,
     platform: input.platform,
     references: input.references,
-    project_id: randomUUID(),
+    project_id: projectId,
     version: template.version,
   });
 
