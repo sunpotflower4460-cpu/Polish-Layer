@@ -31,7 +31,7 @@ export async function initProject(rawInput: unknown): Promise<Output> {
     platform: input.platform,
     references: input.references,
     project_id: randomUUID(),
-    version: template.version ?? '1.0.0',
+    version: template.version,
   });
 
   const output: Output = {
