@@ -56,8 +56,27 @@ Polish Layer は MCP（Model Context Protocol）サーバーとして **6 つの
 {
   "code": "/* SwiftUI コード片 */",
   "assets": [
-    { "type": "icon", "name": "envelope", "source": "sf-symbols" },
-    { "type": "lottie", "url": "https://...", "license": "free-commercial" }
+    {
+      "type": "icon",
+      "name": "envelope",
+      "source": "sf-symbols",
+      "license_info": {
+        "type": "apple-system",
+        "attribution_required": false,
+        "commercial_use": true,
+        "source_url": "https://developer.apple.com/sf-symbols/"
+      }
+    },
+    {
+      "type": "lottie",
+      "url": "https://...",
+      "license_info": {
+        "type": "free-commercial",
+        "attribution_required": false,
+        "commercial_use": true,
+        "source_url": "https://lottiefiles.com/"
+      }
+    }
   ],
   "qc_passed": true,
   "warnings": []
@@ -81,8 +100,28 @@ Polish Layer は MCP（Model Context Protocol）サーバーとして **6 つの
 ```json
 {
   "candidates": [
-    { "name": "gearshape", "source": "sf-symbols", "preview_url": "...", "license": "apple-system" },
-    { "name": "settings", "source": "iconify", "preview_url": "...", "license": "MIT" }
+    {
+      "name": "gearshape",
+      "source": "sf-symbols",
+      "preview_url": "...",
+      "license_info": {
+        "type": "apple-system",
+        "attribution_required": false,
+        "commercial_use": true,
+        "source_url": "https://developer.apple.com/sf-symbols/"
+      }
+    },
+    {
+      "name": "settings",
+      "source": "iconify",
+      "preview_url": "...",
+      "license_info": {
+        "type": "MIT",
+        "attribution_required": false,
+        "commercial_use": true,
+        "source_url": "https://iconify.design/"
+      }
+    }
   ]
 }
 ```
@@ -108,7 +147,12 @@ Polish Layer は MCP（Model Context Protocol）サーバーとして **6 つの
       "url": "https://lottiefiles.com/...",
       "preview_url": "...",
       "duration_ms": 1200,
-      "license": "free-commercial"
+      "license_info": {
+        "type": "free-commercial",
+        "attribution_required": false,
+        "commercial_use": true,
+        "source_url": "https://lottiefiles.com/"
+      }
     }
   ]
 }
@@ -135,7 +179,12 @@ Polish Layer は MCP（Model Context Protocol）サーバーとして **6 つの
       "url": "https://...",
       "format": "aac",
       "loudness_lufs": -16,
-      "license": "CC0"
+      "license_info": {
+        "type": "CC0",
+        "attribution_required": false,
+        "commercial_use": true,
+        "source_url": "https://freesound.org/"
+      }
     }
   ]
 }

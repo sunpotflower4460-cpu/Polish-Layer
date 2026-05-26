@@ -81,7 +81,7 @@ interface LicenseInfo {
 ## ライセンス取り扱いルール
 
 - 商用利用不可のアセットは検索結果に含めない（フィルタ）。
-- 結果には必ず `license` フィールドを付与。
+- 結果には必ず `license_info` フィールドを付与。
 - 帰属表示が必要なアセットは `attribution_required: true` を立て、エージェントが credit ファイルを生成できるようにする。
 
 ## 設計判断の記録
