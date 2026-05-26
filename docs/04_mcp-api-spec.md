@@ -36,8 +36,8 @@ Polish Layer の MCP メソッドは以下の 3 区分で管理する。
 | `polish.init_project` | プロジェクト初期化・Style Bible 生成 | ✅ 実装済み |
 | `polish.get_icon` | アイコンを意味語で取得 | ✅ SF Symbols / Iconify |
 | `polish.get_font` | フォントを family 名 / category で取得 | ✅ Google Fonts |
-| `polish.get_animation` | アニメーションを意図で取得 | ⏳ PR-B2 実装予定 |
-| `polish.get_sound` | UI SE / BGM を取得 | ⏳ PR-B2 実装予定 |
+| `polish.get_animation` | アニメーションを意図で取得 | ⏳ Phase α-1 実装予定 |
+| `polish.get_sound` | UI SE / BGM を取得 | ⏳ Phase α-1 実装予定 |
 
 ### 5.2 Deprecated Runtime API
 
