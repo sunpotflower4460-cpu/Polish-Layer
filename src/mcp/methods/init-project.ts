@@ -1,7 +1,5 @@
 import { randomUUID } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
 
 import type { z } from 'zod';
 
@@ -11,10 +9,10 @@ import {
   StyleBibleSchema,
   StyleBibleTemplateSchema,
 } from '../schemas/index.js';
+import { resolveFromRoot } from '../../utils/paths.js';
 
 type Output = z.infer<typeof InitProjectOutputSchema>;
 
-const currentDir = dirname(fileURLToPath(import.meta.url));
 const TEMPLATE_FILES = {
   productivity: 'productivity.json',
   social: 'social.json',
@@ -27,8 +25,9 @@ export async function initProject(rawInput: unknown): Promise<Output> {
   const input = InitProjectInputSchema.parse(rawInput);
 
   // TODO(Phase 3): Replace template-only bootstrap with generated Style Bible refinement.
+  // NOTE: distribution-time template bundling is out of Phase 1 scope.
 
-  const templatePath = resolve(currentDir, '../../../templates/style-bible', TEMPLATE_FILES[input.category]);
+  const templatePath = resolveFromRoot('templates/style-bible', TEMPLATE_FILES[input.category]);
   const templateText = await readFile(templatePath, 'utf-8');
   const template = StyleBibleTemplateSchema.parse(JSON.parse(templateText));
   const projectId = randomUUID();

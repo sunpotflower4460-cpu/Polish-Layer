@@ -1,6 +1,3 @@
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
-
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
@@ -13,6 +10,7 @@ import { getSound } from './methods/get-sound.js';
 import { initProject } from './methods/init-project.js';
 import { qcCheck } from './methods/qc-check.js';
 import { ErrorResponseSchema } from './schemas/index.js';
+import { readPackageVersion } from '../utils/paths.js';
 
 type ErrorCode = 'INVALID_INPUT' | 'PROJECT_NOT_FOUND' | 'UPSTREAM_ERROR' | 'LICENSE_RESTRICTED' | 'RATE_LIMITED';
 
@@ -24,17 +22,6 @@ type ToolDefinition = {
   inputSchema: Record<string, unknown>;
   handler: ToolHandler;
 };
-
-function readPackageVersion(): string {
-  try {
-    const packageJsonPath = resolve(process.cwd(), 'package.json');
-    const parsed = JSON.parse(readFileSync(packageJsonPath, 'utf-8')) as { version?: string };
-    return parsed.version ?? '0.0.0';
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    throw new Error(`Failed to read package version from package.json: ${message}`);
-  }
-}
 
 function createErrorResponse(code: ErrorCode, message: string, details: Record<string, unknown> = {}) {
   return ErrorResponseSchema.parse({
