@@ -8,7 +8,12 @@ Polish Layer は素材・部品・ノウハウ供給を担い、darake-dev-app-A
 
 Polish Layer は、エージェントが MCP（Model Context Protocol）経由で接続して呼び出せる素材供給基盤として、以下を提供する。
 
-- **Asset Connectors**：SF Symbols / Iconify / Google Fonts / LottieFiles / freesound 等の外部APIを統一インターフェースで提供
+**現在提供している機能:**
+
+- **Asset Connectors**：SF Symbols / Iconify / Google Fonts の外部APIを統一インターフェースで提供（PR-B2 で Animations / freesound 追加予定）
+
+**計画中（Phase α-4 以降）:**
+
 - **棚構造（signature / curated / all）**：品質優先で素材を返すための3層運用
 - **取得冗長化（API / cache / bundled）**：供給安定性の担保
 
