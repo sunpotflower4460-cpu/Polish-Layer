@@ -83,7 +83,7 @@ withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
 import React, { useState } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 
-import { useStyleBible } from '@/hooks/use-style-bible';
+import { useStyleBible } from './style-bible';
 
 interface LoginScreenProps {
   onSuccess: () => void;
@@ -106,6 +106,20 @@ const styles = StyleSheet.create({
   },
 });
 ```
+
+### ジェネレータの責務（RN）
+
+`polish.get_screen` は画面コンポーネントだけでなく、**Style Bible 参照用の最小モジュール（`style-bible.ts`）も同じディレクトリに同時 emit する**。これにより消費者プロジェクトが path alias（`@/...`）を設定していなくても動作する。
+
+emit 構成例：
+
+```
+generated/
+├── LoginScreen.tsx
+└── style-bible.ts
+```
+
+エイリアス導入は消費者プロジェクト側の任意設定であり、Polish Layer の生成物はそれに依存しない。
 
 ### カラー参照
 
