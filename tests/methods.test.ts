@@ -84,7 +84,7 @@ describe('methods', () => {
     const safeParseSpy = vi.spyOn(GetIconOutputSchema, 'safeParse');
     safeParseSpy.mockReturnValueOnce({
       success: false,
-      error: new ZodError([]),
+      error: new ZodError([{ code: 'custom', message: 'test error', path: [] }]),
     });
 
     await expect(

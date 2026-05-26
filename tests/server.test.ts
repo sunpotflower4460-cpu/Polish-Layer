@@ -7,7 +7,10 @@ import {
 
 function getRequiredKeys(schema: Record<string, unknown>): string[] {
   const required = schema.required;
-  return Array.isArray(required) ? required.filter((value): value is string => typeof value === 'string') : [];
+  if (!Array.isArray(required)) {
+    return [];
+  }
+  return required.filter((value): value is string => typeof value === 'string');
 }
 
 describe('mcp server', () => {

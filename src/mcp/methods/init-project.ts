@@ -13,6 +13,7 @@ import {
 import { resolveFromRoot } from '../../utils/paths.js';
 
 type Output = z.infer<typeof InitProjectOutputSchema>;
+const DEFAULT_STYLE_BIBLE_VERSION = '1.0.0';
 
 const TEMPLATE_FILES = {
   productivity: 'productivity.json',
@@ -43,7 +44,7 @@ export async function initProject(rawInput: unknown): Promise<Output> {
     platform: input.platform,
     references: input.references,
     project_id: projectId,
-    version: template.version ?? '1.0.0',
+    version: template.version ?? DEFAULT_STYLE_BIBLE_VERSION,
   });
   if (!parsedStyleBible.success) {
     throw new OutputValidationError('init_project style_bible failed schema validation', parsedStyleBible.error);
