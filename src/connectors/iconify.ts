@@ -37,9 +37,17 @@ function toUpstreamError(message: string, cause: unknown): UpstreamError {
   return error;
 }
 
+function parseIconName(icon: string): { prefix: string; name: string } {
+  const [prefix, name] = icon.split(':', 2);
+  if (!prefix || !name) {
+    throw new Error(`Invalid icon name format: ${icon}`);
+  }
+  return { prefix, name };
+}
+
 function buildPreviewUrl(icon: string): string {
-  const [prefix, name] = icon.split(':');
-  return `https://api.iconify.design/${encodeURIComponent(prefix ?? '')}/${encodeURIComponent(name ?? '')}.svg`;
+  const parsed = parseIconName(icon);
+  return `https://api.iconify.design/${encodeURIComponent(parsed.prefix)}/${encodeURIComponent(parsed.name)}.svg`;
 }
 
 export class IconifyConnector implements Connector<IconifyQuery, GetIconCandidate> {

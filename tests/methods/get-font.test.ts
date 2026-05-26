@@ -48,17 +48,19 @@ describe('get_font method', () => {
     const originalApiKey = process.env.GOOGLE_FONTS_API_KEY;
     delete process.env.GOOGLE_FONTS_API_KEY;
 
-    await expect(
-      getFont({
-        project_id: crypto.randomUUID(),
-        semantic: 'Roboto',
-      }),
-    ).rejects.toMatchObject({ code: 'MISSING_ENV' });
-
-    if (originalApiKey === undefined) {
-      delete process.env.GOOGLE_FONTS_API_KEY;
-    } else {
-      process.env.GOOGLE_FONTS_API_KEY = originalApiKey;
+    try {
+      await expect(
+        getFont({
+          project_id: crypto.randomUUID(),
+          semantic: 'Roboto',
+        }),
+      ).rejects.toMatchObject({ code: 'MISSING_ENV' });
+    } finally {
+      if (originalApiKey === undefined) {
+        delete process.env.GOOGLE_FONTS_API_KEY;
+      } else {
+        process.env.GOOGLE_FONTS_API_KEY = originalApiKey;
+      }
     }
   });
 });
