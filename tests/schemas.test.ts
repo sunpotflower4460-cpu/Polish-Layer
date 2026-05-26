@@ -166,7 +166,7 @@ describe('schemas', () => {
   });
 
   test('all committed style-bible templates satisfy template schema', () => {
-    const categories = ['productivity', 'social', 'finance', 'health', 'utility'];
+    const categories = InitProjectInputSchema.shape.category.options;
     for (const category of categories) {
       const templatePath = resolve(process.cwd(), `templates/style-bible/${category}.json`);
       const template = JSON.parse(readFileSync(templatePath, 'utf-8'));
