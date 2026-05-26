@@ -2,16 +2,11 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/sunpotflower4460-cpu/Polish-Layer/specs/style-bible.template.schema.json",
   "title": "StyleBibleTemplate",
-  "description": "Polish Layer プロジェクトのスタイル規定テンプレート（project_id 注入前）",
+  "description": "Polish Layer プロジェクトのスタイル規定テンプレート（project_id 注入前。project_id プロパティを持つことは禁止）",
   "type": "object",
   "required": ["references", "platform", "category", "design_system", "motion", "sound", "copy", "qc_thresholds"],
   "additionalProperties": false,
   "properties": {
-    "project_id": {
-      "type": "string",
-      "format": "uuid",
-      "description": "プロジェクト固有ID（UUID v4）。polish.init_project 呼び出し時に自動付与される。テンプレートには含まれない。"
-    },
     "version": {
       "type": "string",
       "pattern": "^\\d+\\.\\d+\\.\\d+$",

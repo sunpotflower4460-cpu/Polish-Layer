@@ -1,5 +1,6 @@
 import type { z } from 'zod';
 
+import { OutputValidationError } from '../errors.js';
 import { GetScreenInputSchema, GetScreenOutputSchema } from '../schemas/index.js';
 
 type Output = z.infer<typeof GetScreenOutputSchema>;
@@ -39,5 +40,9 @@ export async function getScreen(rawInput: unknown): Promise<Output> {
     warnings: [],
   };
 
-  return GetScreenOutputSchema.parse(output);
+  const result = GetScreenOutputSchema.safeParse(output);
+  if (!result.success) {
+    throw new OutputValidationError('get_screen output failed schema validation', result.error);
+  }
+  return result.data;
 }

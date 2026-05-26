@@ -1,18 +1,26 @@
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
-
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
-import { ZodError } from 'zod';
+import { zodToJsonSchema } from 'zod-to-json-schema';
+import { ZodError, type z } from 'zod';
 
+import { OutputValidationError } from './errors.js';
 import { getAnimation } from './methods/get-animation.js';
 import { getIcon } from './methods/get-icon.js';
 import { getScreen } from './methods/get-screen.js';
 import { getSound } from './methods/get-sound.js';
 import { initProject } from './methods/init-project.js';
 import { qcCheck } from './methods/qc-check.js';
-import { ErrorResponseSchema } from './schemas/index.js';
+import {
+  ErrorResponseSchema,
+  GetAnimationInputSchema,
+  GetIconInputSchema,
+  GetScreenInputSchema,
+  GetSoundInputSchema,
+  InitProjectInputSchema,
+  QcCheckInputSchema,
+} from './schemas/index.js';
+import { readPackageVersion } from '../utils/paths.js';
 
 type ErrorCode = 'INVALID_INPUT' | 'PROJECT_NOT_FOUND' | 'UPSTREAM_ERROR' | 'LICENSE_RESTRICTED' | 'RATE_LIMITED';
 
@@ -25,17 +33,6 @@ type ToolDefinition = {
   handler: ToolHandler;
 };
 
-function readPackageVersion(): string {
-  try {
-    const packageJsonPath = resolve(process.cwd(), 'package.json');
-    const parsed = JSON.parse(readFileSync(packageJsonPath, 'utf-8')) as { version?: string };
-    return parsed.version ?? '0.0.0';
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    throw new Error(`Failed to read package version from package.json: ${message}`);
-  }
-}
-
 function createErrorResponse(code: ErrorCode, message: string, details: Record<string, unknown> = {}) {
   return ErrorResponseSchema.parse({
     error: {
@@ -47,6 +44,13 @@ function createErrorResponse(code: ErrorCode, message: string, details: Record<s
 }
 
 function toToolError(error: unknown) {
+  if (error instanceof OutputValidationError) {
+    return createErrorResponse('UPSTREAM_ERROR', error.message, {
+      kind: 'output_validation',
+      issues: error.zodError.issues,
+    });
+  }
+
   if (error instanceof ZodError) {
     return createErrorResponse('INVALID_INPUT', 'Input schema validation failed', {
       issues: error.issues,
@@ -57,95 +61,48 @@ function toToolError(error: unknown) {
   return createErrorResponse('UPSTREAM_ERROR', message);
 }
 
+function toMcpInputSchema(schema: z.ZodTypeAny): Record<string, unknown> {
+  return zodToJsonSchema(schema, {
+    target: 'jsonSchema7',
+    $refStrategy: 'none',
+  }) as Record<string, unknown>;
+}
+
 export const TOOL_DEFINITIONS: ToolDefinition[] = [
   {
     name: 'polish.init_project',
     description: 'Initialize a project with a Style Bible template and references',
-    inputSchema: {
-      type: 'object',
-      additionalProperties: false,
-      required: ['references', 'category', 'platform'],
-      properties: {
-        references: { type: 'array', items: { type: 'string' } },
-        category: { type: 'string', enum: ['productivity', 'social', 'finance', 'health', 'utility'] },
-        platform: { type: 'string', enum: ['ios', 'android', 'both'] },
-      },
-    },
+    inputSchema: toMcpInputSchema(InitProjectInputSchema),
     handler: initProject,
   },
   {
     name: 'polish.get_screen',
     description: 'Get a polished screen code stub and associated assets',
-    inputSchema: {
-      type: 'object',
-      additionalProperties: false,
-      required: ['project_id', 'intent', 'framework'],
-      properties: {
-        project_id: { type: 'string', format: 'uuid' },
-        intent: { type: 'string' },
-        framework: { type: 'string', enum: ['swiftui', 'react-native'] },
-      },
-    },
+    inputSchema: toMcpInputSchema(GetScreenInputSchema),
     handler: getScreen,
   },
   {
     name: 'polish.get_icon',
     description: 'Get icon candidates by semantic intent',
-    inputSchema: {
-      type: 'object',
-      additionalProperties: false,
-      required: ['project_id', 'semantic'],
-      properties: {
-        project_id: { type: 'string', format: 'uuid' },
-        semantic: { type: 'string' },
-        preferred_source: { type: 'string', enum: ['sf-symbols', 'iconify', 'lucide', 'phosphor'] },
-      },
-    },
+    inputSchema: toMcpInputSchema(GetIconInputSchema),
     handler: getIcon,
   },
   {
     name: 'polish.get_animation',
     description: 'Get animation candidates by intent',
-    inputSchema: {
-      type: 'object',
-      additionalProperties: false,
-      required: ['project_id', 'intent'],
-      properties: {
-        project_id: { type: 'string', format: 'uuid' },
-        intent: { type: 'string' },
-        max_results: { type: 'integer', minimum: 1 },
-      },
-    },
+    inputSchema: toMcpInputSchema(GetAnimationInputSchema),
     handler: getAnimation,
   },
   {
     name: 'polish.get_sound',
     description: 'Get sound effect candidates by event',
-    inputSchema: {
-      type: 'object',
-      additionalProperties: false,
-      required: ['project_id', 'event'],
-      properties: {
-        project_id: { type: 'string', format: 'uuid' },
-        event: { type: 'string', enum: ['tap', 'success', 'error', 'notification'] },
-        duration_max_ms: { type: 'integer', minimum: 1 },
-      },
-    },
+    inputSchema: toMcpInputSchema(GetSoundInputSchema),
     handler: getSound,
   },
   {
     name: 'polish.qc_check',
     description: 'Run a QC check against generated artifacts',
-    inputSchema: {
-      type: 'object',
-      additionalProperties: false,
-      required: ['project_id', 'artifact_type', 'content'],
-      properties: {
-        project_id: { type: 'string', format: 'uuid' },
-        artifact_type: { type: 'string', enum: ['swiftui_code', 'image', 'audio'] },
-        content: { type: 'string' },
-      },
-    },
+    inputSchema: toMcpInputSchema(QcCheckInputSchema),
     handler: qcCheck,
   },
 ];

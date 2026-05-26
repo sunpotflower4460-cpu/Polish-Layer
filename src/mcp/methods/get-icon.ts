@@ -1,5 +1,6 @@
 import type { z } from 'zod';
 
+import { OutputValidationError } from '../errors.js';
 import { GetIconInputSchema, GetIconOutputSchema } from '../schemas/index.js';
 
 type Output = z.infer<typeof GetIconOutputSchema>;
@@ -26,5 +27,9 @@ export async function getIcon(rawInput: unknown): Promise<Output> {
     ],
   };
 
-  return GetIconOutputSchema.parse(output);
+  const result = GetIconOutputSchema.safeParse(output);
+  if (!result.success) {
+    throw new OutputValidationError('get_icon output failed schema validation', result.error);
+  }
+  return result.data;
 }

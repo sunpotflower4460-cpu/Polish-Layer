@@ -1,5 +1,6 @@
 import type { z } from 'zod';
 
+import { OutputValidationError } from '../errors.js';
 import { QcCheckInputSchema, QcCheckOutputSchema } from '../schemas/index.js';
 
 type Output = z.infer<typeof QcCheckOutputSchema>;
@@ -15,5 +16,9 @@ export async function qcCheck(rawInput: unknown): Promise<Output> {
     violations: [],
   };
 
-  return QcCheckOutputSchema.parse(output);
+  const result = QcCheckOutputSchema.safeParse(output);
+  if (!result.success) {
+    throw new OutputValidationError('qc_check output failed schema validation', result.error);
+  }
+  return result.data;
 }
