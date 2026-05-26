@@ -1,6 +1,9 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
+import { ZodError } from 'zod';
+
+import { OutputValidationError } from '../src/mcp/errors.js';
 import { getAnimation } from '../src/mcp/methods/get-animation.js';
 import { getIcon } from '../src/mcp/methods/get-icon.js';
 import { getScreen } from '../src/mcp/methods/get-screen.js';
@@ -71,5 +74,26 @@ describe('methods', () => {
       expect(result.style_bible).toHaveProperty(key);
     }
     expect(Object.keys(result.style_bible).sort()).toEqual(Object.keys(spec.properties).sort());
+  });
+
+  test('invalid input throws ZodError', async () => {
+    await expect(getIcon({ project_id: 'not-a-uuid', semantic: '設定' })).rejects.toBeInstanceOf(ZodError);
+  });
+
+  test('output schema mismatch throws OutputValidationError', async () => {
+    const safeParseSpy = vi.spyOn(GetIconOutputSchema, 'safeParse');
+    safeParseSpy.mockReturnValueOnce({
+      success: false,
+      error: new ZodError([]),
+    });
+
+    await expect(
+      getIcon({
+        project_id: crypto.randomUUID(),
+        semantic: '設定',
+      }),
+    ).rejects.toBeInstanceOf(OutputValidationError);
+
+    safeParseSpy.mockRestore();
   });
 });

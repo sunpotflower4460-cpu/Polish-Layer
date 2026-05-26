@@ -1,5 +1,6 @@
 import type { z } from 'zod';
 
+import { OutputValidationError } from '../errors.js';
 import { GetAnimationInputSchema, GetAnimationOutputSchema } from '../schemas/index.js';
 
 type Output = z.infer<typeof GetAnimationOutputSchema>;
@@ -26,5 +27,9 @@ export async function getAnimation(rawInput: unknown): Promise<Output> {
     ],
   };
 
-  return GetAnimationOutputSchema.parse(output);
+  const result = GetAnimationOutputSchema.safeParse(output);
+  if (!result.success) {
+    throw new OutputValidationError('get_animation output failed schema validation', result.error);
+  }
+  return result.data;
 }

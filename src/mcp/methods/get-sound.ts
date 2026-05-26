@@ -1,5 +1,6 @@
 import type { z } from 'zod';
 
+import { OutputValidationError } from '../errors.js';
 import { GetSoundInputSchema, GetSoundOutputSchema } from '../schemas/index.js';
 
 type Output = z.infer<typeof GetSoundOutputSchema>;
@@ -26,5 +27,9 @@ export async function getSound(rawInput: unknown): Promise<Output> {
     ],
   };
 
-  return GetSoundOutputSchema.parse(output);
+  const result = GetSoundOutputSchema.safeParse(output);
+  if (!result.success) {
+    throw new OutputValidationError('get_sound output failed schema validation', result.error);
+  }
+  return result.data;
 }

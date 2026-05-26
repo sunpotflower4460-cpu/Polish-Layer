@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 
 import type { z } from 'zod';
 
+import { OutputValidationError } from '../errors.js';
 import {
   InitProjectInputSchema,
   InitProjectOutputSchema,
@@ -29,10 +30,14 @@ export async function initProject(rawInput: unknown): Promise<Output> {
 
   const templatePath = resolveFromRoot('templates/style-bible', TEMPLATE_FILES[input.category]);
   const templateText = await readFile(templatePath, 'utf-8');
-  const template = StyleBibleTemplateSchema.parse(JSON.parse(templateText));
+  const parsedTemplate = StyleBibleTemplateSchema.safeParse(JSON.parse(templateText));
+  if (!parsedTemplate.success) {
+    throw new OutputValidationError('init_project template failed schema validation', parsedTemplate.error);
+  }
+  const template = parsedTemplate.data;
   const projectId = randomUUID();
 
-  const styleBible = StyleBibleSchema.parse({
+  const parsedStyleBible = StyleBibleSchema.safeParse({
     ...template,
     category: input.category,
     platform: input.platform,
@@ -40,11 +45,19 @@ export async function initProject(rawInput: unknown): Promise<Output> {
     project_id: projectId,
     version: template.version,
   });
+  if (!parsedStyleBible.success) {
+    throw new OutputValidationError('init_project style_bible failed schema validation', parsedStyleBible.error);
+  }
+  const styleBible = parsedStyleBible.data;
 
   const output: Output = {
     project_id: styleBible.project_id,
     style_bible: styleBible,
   };
 
-  return InitProjectOutputSchema.parse(output);
+  const result = InitProjectOutputSchema.safeParse(output);
+  if (!result.success) {
+    throw new OutputValidationError('init_project output failed schema validation', result.error);
+  }
+  return result.data;
 }

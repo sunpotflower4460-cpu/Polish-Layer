@@ -4,6 +4,7 @@ import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprot
 import { zodToJsonSchema } from 'zod-to-json-schema';
 import { ZodError, type z } from 'zod';
 
+import { OutputValidationError } from './errors.js';
 import { getAnimation } from './methods/get-animation.js';
 import { getIcon } from './methods/get-icon.js';
 import { getScreen } from './methods/get-screen.js';
@@ -43,6 +44,13 @@ function createErrorResponse(code: ErrorCode, message: string, details: Record<s
 }
 
 function toToolError(error: unknown) {
+  if (error instanceof OutputValidationError) {
+    return createErrorResponse('UPSTREAM_ERROR', error.message, {
+      kind: 'output_validation',
+      issues: error.zodError.issues,
+    });
+  }
+
   if (error instanceof ZodError) {
     return createErrorResponse('INVALID_INPUT', 'Input schema validation failed', {
       issues: error.issues,
